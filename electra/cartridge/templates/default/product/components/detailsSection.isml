@@ -1,0 +1,244 @@
+<script id="bambuser-one-to-one" src="https://salesforce-automotive.one-to-one.bambuser.com/embed.js"></script>
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script>
+    window.onBambuserOneToOneReady = function (BambuserOneToOneEmbed) {
+        let oneToOneEmbed = new BambuserOneToOneEmbed({ orgId: 'U8ga6DHony64AwcbjXTd' });
+
+        let button = document.querySelector('#start-one-to-one');
+        button.addEventListener('click', () => {
+            oneToOneEmbed.show();
+        });
+
+        var product;
+        var productPrice;
+        var productImage;
+        var url;
+
+        const sandbox = 'zzsa-089';
+        const site = 'electrasfra';
+        const clientId = '0ba04d7f-2902-4fa4-95f6-b5a3410e72f2';
+        const fullUrl = "https://" + sandbox + ".sandbox.us01.dx.commercecloud.salesforce.com/s/" + site
+
+        oneToOneEmbed.on('provide-search-data', (searchRequest, searchResponse) => {
+
+            const { term, page } = searchRequest;
+
+            if (term.length < 4) return;
+
+            // 0ba04d7f-2902-4fa4-95f6-b5a3410e72f2
+
+            fetch(
+            // "https://" 
+            // + sandbox 
+            // + ".sandbox.us01.dx.commercecloud.salesforce.com/s/" 
+            // + site 
+            fullUrl
+            + "/dw/shop/v21_6/product_search?q=" + term
+            + "&client_id=" + clientId
+            + "&all_images=true&expand=prices,images"
+            )
+            .then(res => res.json())
+            .then(yourSearchResponse => {
+                searchResponse(response => {
+                if (yourSearchResponse.count < 1) { return; }
+
+                return response.products(p => {
+                    const results = yourSearchResponse.hits.map(prod => {
+
+                    return p()
+                        .name(prod.product_name)
+                        .imageUrl(prod.image.dis_base_link)
+                        .sku(prod.product_id)
+                        .price(price => price
+                        .current(prod.price)
+                        .original(0)
+                        )
+                    });
+                    return results;
+                })
+
+                    // Set the currency used here using the standard ISO 4217 three letter code.
+                    .currency('USD')
+                    .locale('en-US')
+
+                // If you would like to paginate search results also provide 
+                // total number of pages, total number of matches and 
+                // the current page.
+
+                })
+            })
+        })
+
+
+        oneToOneEmbed.on("provide-product-data", (request) => {
+            request.products.forEach(({ ref: sku, id: requestId, url: publicUrl }) => {
+
+            product = "";
+            productPrice = "";
+            productImage = ""
+
+            url = fullUrl + "/" + sku + ".html";
+
+            fetch(
+                    fullUrl 
+                    + "/dw/shop/v21_6/products/" + sku 
+                    + "?client_id=" + clientId 
+                    + "&all_images=true&expand=prices,images"
+                )
+                .then((pricesjson) => {
+                    return pricesjson.json()
+                })
+                .then((data) => {
+                    product = data;
+                })
+                .then(() => {
+                    oneToOneEmbed.updateProduct(requestId, (factory) => {
+
+                        return (
+                        factory
+                            // currency to display price in
+                            .currency("USD")
+
+                            // locale that product is localized to
+                            .locale("en-US")
+                            .product((p) =>
+                            p
+                                .name(
+                                product.name
+                                )
+                                .defaultVariationIndex(0)
+                                .url(url)
+                                .variations((variation) => [
+                                variation()
+                                    .inStock(true)
+                                    .url(url)
+                                    .name(product.name)
+                                    .price((pr) =>
+                                    pr
+                                        .current(product.price)
+                                        .original(product.price)
+                                    )
+                                    .imageUrls(
+                                    [product.image_groups[0].images[0].link]
+                                    )
+                                    .sku(sku)
+                                ])
+                            )
+                        );
+                    });
+                });
+            });
+        });
+        
+        oneToOneEmbed.on('should-add-item-to-cart', (addedItem, callback) => {
+            var addToCartUrl;
+            var pid;
+            var pidsObj;
+            var setPids;
+
+            $('body').trigger('product:beforeAddToCart', this);
+
+
+            addToCartUrl = 'https://zzsa-089.sandbox.us01.dx.commercecloud.salesforce.com/on/demandware.store/Sites-electra-Site/default/Cart-AddProduct';
+            // addToCartUrl = 'https://' + sandbox + '.sandbox.us01.dx.commercecloud.salesforce.com/on/demandware.store/Sites-' + site + '-Site/default/Cart-AddProduct';
+
+            var form = {
+                pid: addedItem.sku,
+                pidsObj: [],
+                childProducts: [],
+                quantity: 1
+            };
+
+            $(this).trigger('updateAddToCartFormData', form);
+            if (addToCartUrl) {
+                $.ajax({
+                    url: addToCartUrl,
+                    method: 'POST',
+                    data: form,
+                    success: function (data) {
+                    //    handlePostCartAdd(data);
+                    callback(true)
+                        $('body').trigger('product:afterAddToCart', data);
+                    //    $.spinner().stop();
+                    },
+                    error: function () {
+                        callback(false)
+                     //   $.spinner().stop();
+                    }
+                });
+            }
+            
+            var curBasket = 0;
+            curBasket = parseInt(document.getElementsByClassName('minicart-quantity')[0].innerText) + 1;
+            document.getElementsByClassName('minicart-quantity')[0].innerText = curBasket;
+
+  
+        });
+
+
+        oneToOneEmbed.on('goto-checkout', (event) => {
+
+        // window.open('https://zzse-135.sandbox.us01.dx.commercecloud.salesforce.com/on/demandware.store/Sites-autoforce-Site/default/Checkout-Login', '_blank');
+            window.open(
+                'https://' + sandbox + '.sandbox.us01.dx.commercecloud.salesforce.com/on/demandware.store/Sites-' + site + '-Site/default/Checkout-Login'
+                , '_blank'
+            );
+        });
+    }
+
+</script>
+
+<ul class="nav nav-tabs uppercase" id="myTab" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">
+            ${Resource.msg('label.product.details', 'electra', null)}
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">
+            ${Resource.msg('label.product.attributes', 'electra', null)}
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="livechat-tab" data-toggle="tab" href="#livechat" role="tab" aria-controls="livechat" aria-selected="false">
+            ${Resource.msg('label.product.liveChat', 'electra', null)}
+        </a>
+    </li>
+</ul>
+<div class="tab-content pt-3" id="myTabContent">
+    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        <isloop items="${product.attributes}" var="attrGroup">
+            <isif condition="${attrGroup.ID !== 'mainAttributes'}">
+                <iscomment>
+                    <h3 class="attribute-name">
+                        ${attrGroup.name}
+                    </h3>
+                </iscomment>
+                <ul>
+                    <isloop items="${attrGroup.attributes}" var="attr">
+                        <li class="attribute-values">
+                            ${attr.label}:
+                            <isloop items="${attr.value}" var="value">
+                                ${value}
+                            </isloop>
+                        </li>
+                    </isloop>
+                </ul>
+            </isif>
+        </isloop>
+    </div>
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+        <button class="title btn text-left btn-block d-sm-none" aria-expanded="false"
+            aria-controls="collapsible-attributes-${'1'}">
+            ${Resource.msg('label.attributes', 'product', null)}
+        </button>
+        <h2 class="title d-none d-sm-block">
+            ${Resource.msg('label.attributes', 'product', null)}
+        </h2>
+    </div>
+    <div class="tab-pane fade" id="livechat" role="tabpanel" aria-labelledby="livechat-tab">
+        <button id="start-one-to-one" class="btn btn-primary" style="width:100%">
+            ${Resource.msg('button.product.liveChat', 'electra', null)}
+        </button>
+    </div>
+</div>

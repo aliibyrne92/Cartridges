@@ -1,0 +1,21 @@
+{
+    "name": "Add CSS",
+    "description": "Component to add CSS file to a page",
+    "group": "qb_custom_assets",
+    "attribute_definition_groups": [
+      {
+        "id": "css_detail",
+        "name": "CSS Details",
+        "attribute_definitions": [
+          {
+            "id": "css_file",
+            "name": "CSS File Name",
+            "type": "file",
+            "required": true
+          }
+        ]
+      }
+    ],
+    "region_definitions": []
+}
+  

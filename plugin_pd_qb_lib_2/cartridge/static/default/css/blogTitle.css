@@ -1,0 +1,19 @@
+.blogTitleImage{
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    max-width: 100vw;
+}
+
+.blogText{
+    background-color: white;
+    margin-top: -7rem;
+    z-index: 10;
+    position: relative;
+    padding: 3rem 3rem 1rem 3rem;
+}
+
+.btHashtag{
+    color: #9c9c9c;
+    font-size: 0.9rem;
+}

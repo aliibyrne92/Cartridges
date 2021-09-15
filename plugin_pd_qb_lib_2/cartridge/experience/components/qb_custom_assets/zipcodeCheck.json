@@ -1,0 +1,41 @@
+{
+    "name": "Zipcode Check",
+    "description": "Component to enter customer's zipcode and redirect to a predefined page",
+    "group": "qb_custom_assets",
+    "attribute_definition_groups": [
+      {
+        "id": "zip_detail",
+        "name": "Zip Details",
+        "attribute_definitions": [
+          {
+            "id": "check_zip_button_text",
+            "name": "Button Text",
+            "description": "Defaults to 'Check Availability'",
+            "type": "string",
+            "required": false
+          },
+          {
+              "id": "button_align",
+              "name": "Button Alignment",
+              "type": "enum",
+              "values": [
+                  "Left",
+                  "Center",
+                  "Right"
+              ],
+              "default_value": "Center",
+              "description": "Defaults to Center",
+              "required": false
+          }, 
+          {
+            "id": "redirect_url",
+            "name": "Page Redirect",
+            "type": "url",
+            "required": false
+          }
+        ]
+      }
+    ],
+    "region_definitions": []
+}
+  

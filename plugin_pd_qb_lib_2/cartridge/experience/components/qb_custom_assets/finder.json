@@ -1,0 +1,209 @@
+{
+  "name": "Product Finder Wizard",
+  "description": "A wizard to help the customer find products ",
+  "group": "Components",
+  "attribute_definition_groups": [
+    {
+      "id": "wizard",
+      "name": "Product Finder Wizard Configuration",
+      "description": "You can define the pages and content of the wizard ",
+      "attribute_definitions": [
+        {
+          "id": "wizardTitle",
+          "name": "Wizard Title",
+          "description": "The title of this wizard",
+          "type": "string",
+          "required": true,
+          "default_value": "YO.. this is the wizard"
+        },
+        {
+          "id": "wizardCategory",
+          "name": "Wizard Category for Searches",
+          "description": "This is the category that will contain the products searched for in the wizard",
+          "type": "category",
+          "required": true
+        },
+        {
+          "id": "colorPrimary",
+          "name": "Primary Theme color for this wizard",
+          "description": "This will shade the 'Answer Buttons' in each wizard page",
+          "type": "custom",
+          "editor_definition": {
+            "type": "styling.colorPicker"
+          },
+          "required": false
+        },
+        {
+          "id": "colorAlternate",
+          "name": "Alternate Theme color for this wizard",
+          "description": "This will shade the 'wizard arrow steps' at the top of the wizard.  Each 'active' step will be shaded with this color.",
+          "type": "custom",
+          "editor_definition": {
+            "type": "styling.colorPicker"
+          },
+          "required": false
+        },
+        {
+          "id": "showSteps",
+          "name": "Show Wizard Steps?",
+          "description": "Depending on the occasion, you may or may not want the wizard steps to be visible on the main wizard page. Toggle this off to 'hide' the steps bar at the top of the wizard.",
+          "type": "boolean",
+          "required": false
+        },
+        {
+          "id": "page1",
+          "name": "Wizard - Page 1",
+          "type": "custom",
+          "required": false,
+          "editor_definition": {
+            "type": "com.sfcc.finder3",
+            "configuration": {
+              "options": {
+                "config": [
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "page2",
+          "name": "Wizard - Page 2",
+          "type": "custom",
+          "required": false,
+          "editor_definition": {
+            "type": "com.sfcc.finder3",
+            "configuration": {
+              "options": {
+                "config": [
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "page3",
+          "name": "Wizard - Page 3",
+          "type": "custom",
+          "required": false,
+          "editor_definition": {
+            "type": "com.sfcc.finder3",
+            "configuration": {
+              "options": {
+                "config": [
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "page4",
+          "name": "Wizard - Page 4",
+          "type": "custom",
+          "required": false,
+          "editor_definition": {
+            "type": "com.sfcc.finder3",
+            "configuration": {
+              "options": {
+                "config": [
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "page5",
+          "name": "Wizard - Page 5",
+          "type": "custom",
+          "required": false,
+          "editor_definition": {
+            "type": "com.sfcc.finder3",
+            "configuration": {
+              "options": {
+                "config": [
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "page6",
+          "name": "Wizard - Page 6",
+          "type": "custom",
+          "required": false,
+          "editor_definition": {
+            "type": "com.sfcc.finder3",
+            "configuration": {
+              "options": {
+                "config": [
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "page7",
+          "name": "Wizard - Page 7",
+          "type": "custom",
+          "required": false,
+          "editor_definition": {
+            "type": "com.sfcc.finder3",
+            "configuration": {
+              "options": {
+                "config": [
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "page8",
+          "name": "Wizard - Page 8",
+          "type": "custom",
+          "required": false,
+          "editor_definition": {
+            "type": "com.sfcc.finder3",
+            "configuration": {
+              "options": {
+                "config": [
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "page9",
+          "name": "Wizard - Page 9",
+          "type": "custom",
+          "required": false,
+          "editor_definition": {
+            "type": "com.sfcc.finder3",
+            "configuration": {
+              "options": {
+                "config": [
+                ]
+              }
+            }
+          }
+        },
+        {
+          "id": "page10",
+          "name": "Wizard - Page 10",
+          "type": "custom",
+          "required": false,
+          "editor_definition": {
+            "type": "com.sfcc.finder3",
+            "configuration": {
+              "options": {
+                "config": [
+                ]
+              }
+            }
+          }
+        }
+
+      ]
+    }
+
+  ],
+  "region_definitions": []
+}

@@ -1,0 +1,57 @@
+{
+    "name": "Blog Title",
+    "description": "Component for the title card of a blog post",
+    "group": "qb_custom_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "image__details",
+            "name": "Image Details",
+            "attribute_definitions": [
+                {
+                    "id": "image",
+                    "name": "Image",
+                    "type": "image",
+                    "required": true
+                }
+            ] 
+        },
+        {
+            "id": "text__details",
+            "name": "Text Details",
+            "attribute_definitions": [
+                {
+                    "id": "page_title",
+                    "name": "Page Title",
+                    "type": "markup",
+                    "required": true
+                },
+                {
+                    "id": "hashtag",
+                    "name": "Post Hashtag",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "text_font",
+                    "name": "Text Font",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "text_align",
+                    "name": "Text Alignment",
+                    "description": "Defaults to left",
+                    "type": "enum",
+                    "values": [
+                        "Left",
+                        "Center",
+                        "Right"
+                    ],
+                    "default_value": "Left",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

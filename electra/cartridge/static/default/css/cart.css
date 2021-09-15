@@ -1,0 +1,104 @@
+.container *:not(.fa){
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1.page-title{
+    background-color: transparent;
+    margin: 0;
+    display: block;
+    padding: 1.9em 10px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+h1.page-title:before{
+    display: none;
+}
+
+.page-header{
+    background-image: url(../images/cartBanner.png);
+    background-position: bottom left;
+    background-size: cover;
+}
+
+.row.cart-header {
+    margin-top: 2em;
+}
+.help-text{
+    font-size: .9rem;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+.cart.cart-page {
+    margin-top: 2em;
+}
+
+.cart .card.product-info{
+    padding: 0;
+    background-color: #f9f9f9;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    border-radius: 0;
+}
+
+.line-item-name {
+    font-size: .9em;
+    line-height: 1.5;
+    color: #080707;
+}
+
+.item-image{
+    height: auto;
+}
+
+.left-col{
+    padding: 1em;
+}
+
+.product-details.row {
+    align-items: center;
+}
+.custom-select {
+    background-color: #f9f9f9;
+}
+
+.delete-btn{
+    background-color: #F8F9FA;
+}
+
+.delete-btn button, .delete-btn button.btn-light{
+   height: 100%;
+   background-color: #F8F9FA;
+}
+.price, .pricing{
+    font-size: 1.25rem;
+}
+label.quantity-label{
+    margin-bottom: 1em;
+}
+
+.quantity-form .custom-select {
+    font-size: .85rem;
+    width: auto;
+}
+
+.cart .btn-primary {
+    color: #fff;
+    background-color: #017BC0;
+    border-color: #017BC0;
+    border-radius: 0;
+    text-transform: uppercase;
+}
+.checkout-and-applepay .btn-primary{
+    font-weight: 600;
+} 
+label[for="couponCode"], label[for="shippingMethods"], .tax-label, .shipping-label{
+    font-weight: 600;
+}

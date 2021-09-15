@@ -1,0 +1,234 @@
+.add-to-cart {
+    width: 100%;
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+.pdp-checkout-button {
+    padding: 0 !important;
+}
+
+.threekit-player {
+    height: 500px;
+    width: 500px;
+}
+
+.carousel-container {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+    top: 0; 
+}
+  
+.paymentOptionsTabs {
+    text-transform: uppercase; 
+}
+  
+.paymentOptionsTabs a {
+    padding: 15px 18px;
+    font-size: 20px;
+    color: black !important;
+}
+  
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    box-shadow: inset 0px -3.15px 0 var(--action-colour);
+    font-weight: bold;
+    color: black;
+    background-color: transparent;
+    border-radius: 0;
+}
+  
+.paymentOptionsTabs a, .paymentOptionsTabs a:focus {
+    box-shadow: none; 
+}
+  
+.paymentOptionsTabs a:hover, .paymentOptionsTabs a:focus:hover {
+    box-shadow: none; 
+}
+  
+.paymentOptionsTabs a.active, .paymentOptionsTabs a.active:hover {
+    box-shadow: inset 0px -3.15px 0 var(--action-colour); 
+}
+  
+.customTabs {
+    margin-bottom: 2rem; 
+}
+
+.nav-tabs .nav-link.active {
+    border-bottom: .188em solid var(--action-colour);
+}
+  
+.price {
+    line-height: 1;
+    font-size: 24px; 
+}
+  
+.regText {
+    font-size: 15px; 
+}
+  
+.smallText {
+    font-size: 14px;
+    color: #7E7E7E; 
+}
+  
+.bold {
+    font-weight: bold; 
+}
+  
+.verticalSection {
+    margin-top: 12px; 
+}
+  
+.sectionTitle {
+    font-size: 24px;
+    line-height: 42px; 
+}
+  
+.sectionLabel {
+    font-size: 28px;
+    font-weight: bold; 
+}
+  
+.sectionTile {
+    border: 2px solid #CCC;
+    padding: 39px;
+    margin-top: 12px;
+    background: #f6f6f6; 
+}
+  
+.sectionTile.active {
+    outline: 6px solid var(--action-colour);
+    background: white;
+    border: none; 
+}
+  
+.sectionTile.active:hover {
+    border: none;
+    outline: 6px solid var(--action-colour); 
+}
+  
+.sectionTile table {
+    width: 100%; 
+}
+  
+.sectionBody {
+    padding: 25px;
+    background: #F6F6F6; 
+}
+  
+.cash .sectionBody {
+    padding: 0; 
+}
+  
+.inputLabel {
+    font-size: 16px; 
+}
+  
+.slidecontainer {
+    width: 100%; 
+}
+  
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+    background: #ECEBEA;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s; 
+}
+  
+.slider:hover {
+    opacity: 1; 
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--action-colour);
+    cursor: pointer; 
+}
+  
+.slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--action-colour);
+    cursor: pointer; 
+}
+  
+.downPayment {
+    font-size: 24px; 
+}
+  
+.downPayment input {
+    padding: 3px;
+    width: 147px;
+    text-align: center;
+    border: 1px solid #CCC;
+    box-sizing: border-box; 
+}
+  
+.termWrap > button {
+    padding: 1rem;
+    border: 1px solid #CCC; 
+}
+  
+.termWrap > button:hover, 
+.sectionTile:hover {
+    background: white;
+    border-color: black; 
+}
+  
+.termWrap > .btnActive {
+    outline: 6px solid var(--action-colour) !important;
+    border-color: var(--action-colour);
+    background: white; 
+}
+  
+.termWrap > .btnActive:hover {
+    border-color: var(--action-colour); 
+}
+  
+.term, 
+.miles {
+    font-size: 26px; 
+}
+  
+.rate {
+    font-size: 16px; 
+}
+  
+.hide {
+    display: none; 
+}
+
+.prices {
+    text-align: left;
+}
+
+.cashValue .price {
+    text-align: right;
+}
+
+/* -- PDP Carousel Styles -- */
+
+.stickySection {
+    position: sticky;
+    top: 0;
+}
+
+.stickySection .carousel {
+    min-height: 500px;
+    display: flex;
+}
+
+.stickySection .carousel-inner, .product-carousel .carousel-item {
+    align-self: center;
+}

@@ -1,0 +1,16 @@
+<div class="ftContainer" style="padding:${pdict.containerPad}">
+    <div class="richText" style="
+            display:${pdict.textDisplay};
+            font-size:${pdict.textSize};
+            font-weight:${pdict.textFontWeight};
+            color:${pdict.textColour};
+            text-align:${pdict.textAlign};
+            line-height:${pdict.lineHeight}">
+        <${pdict.textHeaderType} style="display:${pdict.textDisplayHeader};font-family:${pdict.textHeaderFont};">
+            ${pdict.textHeader}
+        </${pdict.textHeaderType}>
+        <div class="ftTextBody" style="display:${pdict.textDisplayBody};font-family:${pdict.textBodyFont};">
+            <isprint value="${pdict.textBody}" encoding="off"/>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,2008 @@
+<!--- Close button --->
+<div class="filter-header">
+    <div class="header-bar d-md-none clearfix">
+        <div class="pull-left d-md-none result-count">
+            <isinclude template="search/resultsCount" />
+        </div>
+        <button class="pull-right close">
+            <span>${Resource.msg('button.close', 'search', null)}</span>
+            <i class="fa fa-close"></i>
+        </button>
+    </div>
+</div>
+
+<div class="sidebar-category-content">
+    <ul class="accordion">
+        <li class="panel-default panel-filter">
+            <a class="toggle panel-heading collapse-col add-image" href="javascript:void(0);">Filtern nach</a>
+            <ul class="inner open-acc-col open-toggle-col">
+                <li class="">
+                    <a class="toggle collapse-col" onclick="openAccordion(this)">
+                        Online Kaufen &amp; Abholen
+                    </a>
+                    <div class="inner open-toggle-col closedAccordion">
+                        <ol class="checkbox-listing">
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterLocations=Ensdorf&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Ensdorf
+                                    <span class="asnMatchCount"> (41)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterLocations=Kaiserslautern&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Kaiserslautern
+                                    <span class="asnMatchCount"> (41)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterLocations=Konz&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Konz
+                                    <span class="asnMatchCount"> (48)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterLocations=Mainz&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Mainz
+                                    <span class="asnMatchCount"> (41)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterLocations=Meisenheim&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Meisenheim
+                                    <span class="asnMatchCount"> (41)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterLocations=Saarbr%C3%BCcken&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Saarbrücken
+                                    <span class="asnMatchCount"> (42
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterLocations=Zweibr%C3%BCcken&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Zweibrücken
+                                    <span class="asnMatchCount"> (42
+                                        )</span>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="">
+                    <a class="toggle collapse-col" onclick="openAccordion(this)">
+                        Online Kaufen &amp; Liefern
+                    </a>
+                    <div class="inner open-toggle-col closedAccordion">
+                        <ol class="checkbox-listing">
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBuyOnline=Online&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Online
+                                    <span class="asnMatchCount"> (41)</span> </a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="">
+                    <a class="toggle collapse-col" onclick="openAccordion(this)">
+                        Sale
+                    </a>
+                    <div class="inner open-toggle-col closedAccordion">
+                        <ol class="checkbox-listing">
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterSale=Sale&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Sale
+                                    <span class="asnMatchCount"> (39)</span> </a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="">
+                    <a class="toggle collapse-col" onclick="openAccordion(this)">
+                        Preis
+                    </a>
+                    <div class="inner open-toggle-col closedAccordion">
+                        <ol class="checkbox-listing">
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterPrice=%3C%20400.00&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    &lt; 400.00
+                                    <span class="asnUnit"> €</span> <span class="asnMatchCount"> (7)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterPrice=400.00%20-%20749.99&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    400.00 - 749.99
+                                    <span class="asnUnit"> €</span> <span class="asnMatchCount"> (20)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterPrice=750.00%20-%20999.99&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    750.00 - 999.99
+                                    <span class="asnUnit"> €</span> <span class="asnMatchCount"> (16)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterPrice=1000.00%20-%201499.99&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    1000.00 - 1499.99
+                                    <span class="asnUnit"> €</span> <span class="asnMatchCount"> (28)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterPrice=1500.00%20-%202999.99&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    1500.00 - 2999.99
+                                    <span class="asnUnit"> €</span> <span class="asnMatchCount"> (40)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterPrice=%3E%3D%203000.00&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    &gt;= 3000.00
+                                    <span class="asnUnit"> €</span> <span class="asnMatchCount"> (14)</span>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="">
+                    <a class="toggle collapse-col" onclick="openAccordion(this)">
+                        Tiefe
+                    </a>
+                    <div class="inner open-toggle-col closedAccordion">
+                        <ol class="checkbox-listing">
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20212%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 212 cm
+                                    <span class="asnMatchCount"> (4)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2089%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 89 cm
+                                    <span class="asnMatchCount"> (4)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2085%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 85 cm
+                                    <span class="asnMatchCount"> (3)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2092%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 92 cm
+                                    <span class="asnMatchCount"> (3)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2090%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 90 cm
+                                    <span class="asnMatchCount"> (3)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2095%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 95 cm
+                                    <span class="asnMatchCount"> (3)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2020%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 20 cm
+                                    <span class="asnMatchCount"> (3)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2091%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 91 cm
+                                    <span class="asnMatchCount"> (3)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20110%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 110 cm
+                                    <span class="asnMatchCount"> (3)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20111%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 111 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20180%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 180 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20107%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 107 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2096%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 96 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2098%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 98 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%202%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 2 cm
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20207%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 207 cm
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20205%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 205 cm
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2097%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 97 cm
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2093%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 93 cm
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20114%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 114 cm
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2064%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 64 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20195%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 195 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2083%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 83 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2016%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 16 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2084%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 84 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20112%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 112 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2087%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 87 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2011%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 11 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20255%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 255 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20155%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 155 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20117%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 117 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%2086%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 86 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20242%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 242 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20177%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 177 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20214%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 214 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20282%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 282 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20217%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 217 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20222%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 222 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20176%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 176 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20224%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 224 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20218%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 218 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20209%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 209 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20164%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 164 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20302%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 302 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20249%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 249 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20178%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 178 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterTiefe=ca.%20183%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 183 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="">
+                    <a class="toggle collapse-col" onclick="openAccordion(this)">
+                        Breite
+                    </a>
+                    <div class="inner open-toggle-col closedAccordion">
+                        <ol class="checkbox-listing">
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20140%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 140 cm
+                                    <span class="asnMatchCount"> (4)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%2030%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 30 cm
+                                    <span class="asnMatchCount"> (3)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20160%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 160 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20200%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 200 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20300%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 300 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20165%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 165 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20172%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 172 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20162%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 162 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20210%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 210 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20270%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 270 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20204%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 204 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20194%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 194 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20307%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 307 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20221%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 221 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20180%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 180 cm
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20208%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 208 cm
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20238%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 238 cm
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20125%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 125 cm
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20168%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 168 cm
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20181%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 181 cm
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20192%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 192 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20325%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 325 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20113%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 113 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20302%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 302 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20189%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 189 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20215%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 215 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20315%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 315 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20206%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 206 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20158%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 158 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%2027%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 27 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20337%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 337 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20196%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 196 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20231%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 231 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20220%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 220 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%2033%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 33 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20230%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 230 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20278%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 278 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20342%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 342 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20252%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 252 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20237%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 237 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20281%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 281 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20285%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 285 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20277%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 277 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20266%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 266 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20144%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 144 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20313%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 313 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20267%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 267 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20254%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 254 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20333%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 333 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20241%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 241 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20212%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 212 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20282%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 282 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20193%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 193 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20275%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 275 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterBreite=ca.%20353%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 353 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+
+                        </ol>
+                    </div>
+                </li>
+                <li class="">
+                    <a class="toggle collapse-col" onclick="openAccordion(this)">
+                        Höhe
+                    </a>
+                    <div class="inner open-toggle-col closedAccordion">
+                        <ol class="checkbox-listing">
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2090%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 90 cm
+                                    <span class="asnMatchCount"> (7)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2088%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 88 cm
+                                    <span class="asnMatchCount"> (5)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2087%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 87 cm
+                                    <span class="asnMatchCount"> (4)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2080%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 80 cm
+                                    <span class="asnMatchCount"> (4)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2092%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 92 cm
+                                    <span class="asnMatchCount"> (4)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2077%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 77 cm
+                                    <span class="asnMatchCount"> (4)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2086%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 86 cm
+                                    <span class="asnMatchCount"> (3)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2010%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 10 cm
+                                    <span class="asnMatchCount"> (3)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2095%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 95 cm
+                                    <span class="asnMatchCount"> (3)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2074%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 74 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%20101%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 101 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%20100%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 100 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2064%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 64 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2083%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 83 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2038%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 38 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%20108%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 108 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2089%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 89 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2082%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 82 cm
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2072%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 72 cm
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2081%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 81 cm
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2079%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 79 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2091%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 91 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%20110%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 110 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2042%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 42 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2011%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 11 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2065%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 65 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2094%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 94 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterH%C3%B6he=ca.%2084%20cm&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    ca. 84 cm
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+
+                        </ol>
+                    </div>
+                </li>
+                <li class="">
+                    <a class="toggle collapse-col" onclick="openAccordion(this)">
+                        Farbe
+                    </a>
+                    <div class="inner open-toggle-col closedAccordion">
+                        <ol class="checkbox-listing">
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterFarbe=beige&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    beige
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterFarbe=blau&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    blau
+                                    <span class="asnMatchCount"> (11)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterFarbe=braun&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    braun
+                                    <span class="asnMatchCount"> (18)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterFarbe=gelb&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    gelb
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterFarbe=grau&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    grau
+                                    <span class="asnMatchCount"> (54)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterFarbe=gr%C3%BCn&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    grün
+                                    <span class="asnMatchCount"> (11)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterFarbe=orange&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    orange
+                                    <span class="asnMatchCount"> (2)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterFarbe=pink&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    pink
+                                    <span class="asnMatchCount"> (9)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterFarbe=rot&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    rot
+                                    <span class="asnMatchCount"> (5)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterFarbe=schwarz&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    schwarz
+                                    <span class="asnMatchCount"> (14)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterFarbe=silberfarben&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    silberfarben
+                                    <span class="asnMatchCount"> (6)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterFarbe=wei%C3%9F&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    weiß
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="">
+                    <a class="toggle collapse-col" onclick="openAccordion(this)">
+                        Material
+                    </a>
+                    <div class="inner open-toggle-col closedAccordion">
+                        <ol class="checkbox-listing">
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterMaterial=Holz&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Holz
+                                    <span class="asnMatchCount"> (29)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterMaterial=Holzwerkstoff&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Holzwerkstoff
+                                    <span class="asnMatchCount"> (5)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterMaterial=Kunstleder&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Kunstleder
+                                    <span class="asnMatchCount"> (1)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterMaterial=Kunststoff&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Kunststoff
+                                    <span class="asnMatchCount"> (7)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterMaterial=Leder&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Leder
+                                    <span class="asnMatchCount"> (17)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterMaterial=Metall&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Metall
+                                    <span class="asnMatchCount"> (53)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterMaterial=Textil&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Textil
+                                    <span class="asnMatchCount"> (90)</span>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="">
+                    <a class="toggle collapse-col" onclick="openAccordion(this)">
+                        Marke
+                    </a>
+                    <div class="inner open-toggle-col closedAccordion">
+                        <ol class="checkbox-listing">
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterManufacturer=LIV%27IN&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    LIV'IN
+                                    <span class="asnMatchCount"> (12)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterManufacturer=vito&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    vito
+                                    <span class="asnMatchCount"> (12)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterManufacturer=MONDO&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    MONDO
+                                    <span class="asnMatchCount"> (10)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterManufacturer=set%20one%20by%20Musterring&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    set one by Musterring
+                                    <span class="asnMatchCount"> (6)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect ">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterManufacturer=TOM%20TAILOR&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    TOM TAILOR
+                                    <span class="asnMatchCount"> (6)</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterManufacturer=DSIGN&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    DSIGN
+                                    <span class="asnMatchCount"> (4
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterManufacturer=Musterring&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    Musterring
+                                    <span class="asnMatchCount"> (3
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterManufacturer=JOOP%21&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    JOOP!
+                                    <span class="asnMatchCount"> (2
+                                        )</span>
+                                </a>
+                            </li>
+                            <li class="exp">
+                            </li>
+                            <li class="asnFilter filter-multiselect">
+                                <a
+                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/?filterManufacturer=self&amp;followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                    <i class="fa fa-square-o"></i>
+                                    self
+                                    <span class="asnMatchCount"> (1
+                                        )</span>
+                                </a>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+                <li class="">
+                    <a class="toggle collapse-col" onclick="openAccordion(this)">
+                        Kategorie
+                    </a>
+                    <div class="inner open-toggle-col closedAccordion">
+                        <ol class="nav nav-pills nav-stacked cat-tree nav-pills-sidebar">
+                            <li class="asnFilter active ">
+                                <a href="#" onclick="return false">
+                                    <i class="fa fa-caret-down"></i>
+                                    Möbel
+                                </a>
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li class="asnFilter active ">
+                                        <a
+                                            href="https://www.moebel-martin.de/moebel/?followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                            <i class="fa fa-caret-down"></i>
+                                            Wohnzimmer
+                                        </a>
+                                        <ul class="nav nav-pills nav-stacked">
+                                            <li class="asnFilter active ">
+                                                <a
+                                                    href="https://www.moebel-martin.de/moebel/wohnzimmer/?followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                                    <i class="fa fa-caret-down"></i>
+                                                    Sofa &amp; Couches
+                                                </a>
+                                                <ul class="nav nav-pills nav-stacked">
+                                                    <li class="asnFilter ">
+                                                        <a
+                                                            href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/ecksofas/?followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                                            <i class="fa fa-caret-right"></i>
+                                                            Ecksofas
+                                                            <span class="asnMatchCount"> (48)</span> </a> </li>
+                                                    <li class="asnFilter ">
+                                                        <a
+                                                            href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/einzelsofas/?followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                                            <i class="fa fa-caret-right"></i>
+                                                            Einzelsofas
+                                                            <span class="asnMatchCount"> (48)</span> </a> </li>
+                                                    <li class="asnFilter ">
+                                                        <a
+                                                            href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/schlafsofas/?followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                                            <i class="fa fa-caret-right"></i>
+                                                            Schlafsofas
+                                                            <span class="asnMatchCount"> (15)</span> </a> </li>
+                                                    <li class="asnFilter ">
+                                                        <a
+                                                            href="https://www.moebel-martin.de/moebel/wohnzimmer/sofa-couches/wohnlandschaften/?followSearch=10000&amp;navigation=true&amp;cl=alist">
+                                                            <i class="fa fa-caret-right"></i>
+                                                            Wohnlandschaften
+                                                            <span class="asnMatchCount"> (16)</span> </a> </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<script>
+    function openAccordion(categoryBtn) {
+        var openAccs = document.getElementsByClassName("openAccordion");
+        var openCategories = document.getElementsByClassName("activeCategory");
+        var activeCategory = categoryBtn.nextElementSibling;
+        
+        for(var j=0; j < openAccs.length; j++){
+            if(activeCategory != openAccs[j]){
+                openAccs[j].classList.replace("openAccordion","closedAccordion");
+            }
+        }
+
+        for(var i=0; i < openCategories.length; i++){
+            if(categoryBtn != openCategories[i]){
+                openCategories[i].classList.toggle("activeCategory");
+            }
+        }
+
+        categoryBtn.classList.toggle("activeCategory");
+        
+        if (activeCategory.classList.contains("openAccordion")) {
+            activeCategory.classList.replace("openAccordion","closedAccordion");
+        } else {
+            activeCategory.classList.replace("closedAccordion","openAccordion");
+        }
+    }
+</script>

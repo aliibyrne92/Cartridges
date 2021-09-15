@@ -1,0 +1,888 @@
+<iscomment>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+</iscomment>
+<link rel="stylesheet" href="//www.fuelcdn.com/fuelux/3.13.0/css/fuelux.min.css">
+
+<link rel="stylesheet" href="${URLUtils.staticURL('/css/jquery-ui.css')}">
+<link rel="stylesheet" href="${URLUtils.staticURL('/css/jquery-ui.structure.css')}">
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="*/cartridge/scripts/jquery-ui.js"></script>
+<script src="*/cartridge/scripts/jquery-ui.structure.js"></script>
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//www.fuelcdn.com/fuelux/3.13.0/js/fuelux.min.js"></script>
+
+<script src="https://unpkg.com/gijgo@1.9.11/js/gijgo.min.js" type="text/javascript"></script>
+<link href="https://unpkg.com/gijgo@1.9.11/css/gijgo.min.css" rel="stylesheet" type="text/css"/>
+
+
+<script defer type="text/javascript" src="${URLUtils.staticURL('/js/jquery-ui.structure.js')}"></script>
+<script defer type="text/javascript" src="${URLUtils.staticURL('/js/jquery-ui.js')}"></script>
+
+<style>
+
+    .carQuiz .fuelux .wizard {
+        *zoom: 1;
+        /* border: 1px solid #d4d4d4; */
+        border-radius: 4px;
+        background-color: #fffff;
+        position: relative;
+        min-height: 650px;
+    }
+
+    .carQuiz  .fuelux .wizard:before, .fuelux .wizard:after {
+        display: table;
+        content: "";
+        line-height: 0
+    }
+
+    .carQuiz  .fuelux .wizard:after {
+        clear: both
+    }
+
+    .carQuiz .fuelux .wizard.no-steps-container {
+        overflow: hidden
+    }
+
+    .carQuiz .fuelux .wizard .steps-container {
+        border-radius: 4px 4px 0 0;
+        overflow: hidden
+    }
+
+    .fuelux .wizard > ul.steps, .fuelux .wizard > .steps-container > ul.steps {
+        list-style: none outside none;
+        padding: 0;
+        margin: 0;
+        width: 999999px
+    }
+
+    .fuelux .wizard > ul.steps.previous-disabled li.complete, .fuelux .wizard > .steps-container > ul.steps.previous-disabled li.complete {
+        cursor: default
+    }
+
+    .fuelux .wizard > ul.steps.previous-disabled li.complete:hover, .fuelux .wizard > .steps-container > ul.steps.previous-disabled li.complete:hover {
+        background: #f5f5f5;
+        color: #468847;
+        cursor: default
+    }
+
+    .fuelux .wizard > ul.steps.previous-disabled li.complete:hover .chevron:before, .fuelux .wizard > .steps-container > ul.steps.previous-disabled li.complete:hover .chevron:before {
+        border-left-color: #f5f5f5
+    }
+
+    .fuelux .wizard > ul.steps li, .fuelux .wizard > .steps-container > ul.steps li {
+        float: left;
+        margin: 0;
+        padding: 0 20px 0 30px;
+        height: 46px;
+        line-height: 46px;
+        position: relative;
+        background: #eee;
+        color: #999;
+        font-size: 16px;
+        cursor: not-allowed
+    }
+
+    .fuelux .wizard > ul.steps li .chevron, .fuelux .wizard > .steps-container > ul.steps li .chevron {
+        border: 24px solid transparent;
+        border-left: 14px solid #d4d4d4;
+        border-right: 0;
+        display: block;
+        position: absolute;
+        right: -14px;
+        top: 0;
+        z-index: 1
+    }
+
+    .fuelux .wizard > ul.steps li .chevron:before, .fuelux .wizard > .steps-container > ul.steps li .chevron:before {
+        border: 24px solid transparent;
+        border-left: 14px solid #eee;
+        border-right: 0;
+        content: "";
+        display: block;
+        position: absolute;
+        right: 1px;
+        top: -24px
+    }
+
+    .fuelux .wizard > ul.steps li.complete, .fuelux .wizard > .steps-container > ul.steps li.complete {
+        background: #f5f5f5;
+        color: #468847
+    }
+
+    .fuelux .wizard > ul.steps li.complete:hover, .fuelux .wizard > .steps-container > ul.steps li.complete:hover {
+        background: #e2eaee;
+        cursor: pointer
+    }
+
+    .fuelux .wizard > ul.steps li.complete:hover .chevron:before, .fuelux .wizard > .steps-container > ul.steps li.complete:hover .chevron:before {
+        border-left: 14px solid #e2eaee
+    }
+
+    .fuelux .wizard > ul.steps li.complete .chevron:before, .fuelux .wizard > .steps-container > ul.steps li.complete .chevron:before {
+        border-left: 14px solid #f5f5f5
+    }
+
+    .fuelux .wizard > ul.steps li.active, .fuelux .wizard > .steps-container > ul.steps li.active {
+        background: #eef7fb;
+        color: #3a87ad;
+        cursor: default
+    }
+
+    .fuelux .wizard > ul.steps li.active .chevron:before, .fuelux .wizard > .steps-container > ul.steps li.active .chevron:before {
+        border-left: 14px solid #eef7fb
+    }
+
+    .fuelux .wizard > ul.steps li.active .badge, .fuelux .wizard > .steps-container > ul.steps li.active .badge {
+        background-color: #3a87ad
+    }
+
+    .fuelux .wizard > ul.steps li .badge, .fuelux .wizard > .steps-container > ul.steps li .badge {
+        margin-right: 8px
+    }
+
+    .fuelux .wizard > ul.steps li .badge-success, .fuelux .wizard > .steps-container > ul.steps li .badge-success {
+        background-color: #468847
+    }
+
+    .fuelux .wizard > ul.steps li:first-child, .fuelux .wizard > .steps-container > ul.steps li:first-child {
+        border-radius: 4px 0 0 0;
+        padding-left: 20px
+    }
+
+    .fuelux .wizard.rtl {
+        direction: rtl
+    }
+
+    .fuelux .wizard.rtl > ul.steps, .fuelux .wizard.rtl > .steps-container > ul.steps {
+        right: 0;
+        left: auto;
+        float: right
+    }
+
+    .fuelux .wizard.rtl > ul.steps.previous-disabled li.complete:hover .chevron:before, .fuelux .wizard.rtl > .steps-container > ul.steps.previous-disabled li.complete:hover .chevron:before {
+        border-right-color: #f5f5f5
+    }
+
+    .fuelux .wizard.rtl > ul.steps li, .fuelux .wizard.rtl > .steps-container > ul.steps li {
+        float: right
+    }
+
+    .fuelux .wizard.rtl > ul.steps li .chevron, .fuelux .wizard.rtl > .steps-container > ul.steps li .chevron {
+        right: auto;
+        left: -14px;
+        border-right: 14px solid #ccc;
+        border-left: 0
+    }
+
+    .fuelux .wizard.rtl > ul.steps li .chevron:before, .fuelux .wizard.rtl > .steps-container > ul.steps li .chevron:before {
+        right: auto;
+        left: 1px;
+        border-right: 14px solid #eee;
+        border-left: 0
+    }
+
+    .fuelux .wizard.rtl > ul.steps li.active .chevron:before, .fuelux .wizard.rtl > .steps-container > ul.steps li.active .chevron:before {
+        border-right: 14px solid #eef7fb
+    }
+
+    .fuelux .wizard.rtl > ul.steps li.complete .chevron:before, .fuelux .wizard.rtl > .steps-container > ul.steps li.complete .chevron:before {
+        border-right: 14px solid #f5f5f5
+    }
+
+    .fuelux .wizard.rtl > ul.steps li.complete:hover .chevron:before, .fuelux .wizard.rtl > .steps-container > ul.steps li.complete:hover .chevron:before {
+        border-right: 14px solid #e2eaee;
+        border-left: none
+    }
+
+    .fuelux .wizard.rtl > ul.steps li .badge, .fuelux .wizard.rtl > .steps-container > ul.steps li .badge {
+        margin-left: 8px
+    }
+
+    .fuelux .wizard.rtl > .actions {
+        right: auto;
+        left: 0;
+        float: left;
+        border-left: none;
+        border-right: 1px solid #d4d4d4;
+        border-radius: 4px 0 0 0
+    }
+
+    .fuelux .wizard.rtl > .actions .btn-prev span {
+        margin-left: 5px;
+        margin-right: 0
+    }
+
+    .fuelux .wizard.rtl > .actions .btn-next span {
+        margin-left: 0;
+        margin-right: 5px
+    }
+
+    .fuelux .wizard > .actions {
+        z-index: 1000;
+        position: absolute;
+        right: 0;
+        top: 0;
+        line-height: 46px;
+        float: right;
+        padding-left: 15px;
+        padding-right: 15px;
+        vertical-align: middle;
+        background-color: #e6e6e6;
+        border-left: 1px solid #d4d4d4;
+        border-radius: 0 4px 0 0
+    }
+
+    .fuelux .wizard > .actions a {
+        line-height: 45px;
+        font-size: 12px;
+        margin-right: 8px
+    }
+
+    .fuelux .wizard > .actions .btn-prev[disabled] {
+        cursor: not-allowed
+    }
+
+    .fuelux .wizard > .actions .btn-prev span {
+        margin-right: 5px
+    }
+
+    .fuelux .wizard > .actions .btn-next[disabled] {
+        cursor: not-allowed
+    }
+
+    .fuelux .wizard > .actions .btn-next span {
+        margin-left: 5px
+    }
+
+    .fuelux .wizard .step-content {
+        /* border-top: 1px solid #ccc; */
+        padding: 10px;
+        float: left;
+        width: 100%
+    }
+
+    .fuelux .wizard .step-content .step-pane {
+        display: none
+    }
+
+    .fuelux .wizard .step-content > .active {
+        display: block
+    }
+
+    .fuelux .wizard .step-content > .active .btn-group .active {
+        display: inline-block
+    }
+
+    .fuelux .wizard.complete > .actions .btn-next .glyphicon {
+        display: none
+    }
+
+
+    
+
+</style>
+
+<style>
+
+    .fuelux .wizard > ul.steps li.active, .fuelux .wizard > .steps-container > ul.steps li.active {
+        background: #FFFFFF;
+        color: #000;
+        cursor: default
+    }
+
+    .fuelux .wizard > ul.steps li.active .chevron:before, .fuelux .wizard > .steps-container > ul.steps li.active .chevron:before {
+        border-left: 14px solid ${pdict.wizard.colorAlternate}
+    }
+
+    .fuelux .wizard > ul.steps li.active .badge, .fuelux .wizard > .steps-container > ul.steps li.active .badge {
+        background-color: ${pdict.wizard.colorAlternate}
+    }
+
+    .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+    }
+
+    /* Safari */
+    @-webkit-keyframes spin {
+        0% {
+            -webkit-transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .carQuiz .btn-primary {
+        color: #fff;
+        background-color: ${pdict.wizard.colorAlternate};
+        border-color: ${pdict.wizard.colorPrimary};
+    }
+
+</style>
+
+
+<style>
+<!--  Eira stuff  -->
+
+.carQuiz .card {
+    border: none!important;
+}
+
+.carQuiz .gridView {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.carQuiz .invisible {
+    display: none!important;
+    margin-left: 0px!important;
+    width: 0px!important;
+}
+
+.carQuiz .numberSelected {
+    color: #fff;
+    height: 25px;
+    background-color: ${pdict.wizard.colorPrimary};
+    border-radius: 25px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.carQuiz .widthInfo {
+    width: 25px;
+    margin-left: 10px;
+}
+
+ .carQuiz .sliderBox {
+    background-color: #fff;
+    margin: auto;
+    width: 40%;
+    height: 250px;
+    border-radius: 10px;
+  }
+
+ .carQuiz .slidecontainer {
+    padding-top: 100px;
+    margin: auto; 
+    width: 80%; 
+    vertical-align: middle;
+  }
+
+
+
+    .carQuiz .quiz {
+        width: 500px;
+        height: 1000px;
+    }
+
+    .carQuiz .qcontainer {
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: absolute;
+        width: 100%;
+        background: #fffff;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .carQuiz .qheader a {
+        color: #abb1c7;
+        text-align: center;
+        padding: 14px 16px;
+        margin: 0px;
+        text-decoration: none;
+        font-size: 16px;
+        font-family: Open Sans, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 1px solid #d9dde9;
+    }
+
+.carQuiz .qheader li {
+    color: #abb1c7;
+    text-align: center;
+    padding: 14px 16px;
+    margin: 0px;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: Open Sans, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid #d9dde9;
+}
+
+    .carQuiz .qheader .active {
+        color: #183558;
+        text-align: center;
+        padding: 14px 16px;
+        margin: 0px;
+        text-decoration: none;
+        font-size: 16px;
+        font-family: Open Sans, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-bottom: 1px solid #1589EE;
+    }
+
+    .carQuiz h1 {
+        color: #183558;
+        text-align: center;
+        padding: 12px 50px;
+        line-height: 1.8;
+        font-size: 20px;
+        font-family: Open Sans, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .carQuiz p {
+        color: #757a89;
+        font-family: Open Sans, sans-serif;
+        font-size: 14px;
+    }
+
+    /*Checkbox Styling*/
+    .carQuiz .boxes {
+        margin: 25px;
+            display: grid;
+    grid-template-columns: auto auto;
+
+    }
+
+    .carQuiz label {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .carQuiz label input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+    }
+
+    .carQuiz label :checked ~ .icon-box {
+        /* border: 1px solid ${pdict.wizard.colorPrimary};
+        color: ${pdict.wizard.colorPrimary}; */
+        color: #fff;
+        border: none!important;
+        background-color: black;
+    }
+
+    .carQuiz label .icon-box {
+        width: 260px;
+        height: 60px;
+        background: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: -2px -2px 5px rgba(200, 200, 200, 0.1),
+        3px 3px 5px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+        margin: 10px;
+        font-size: 16px;
+        font-family: Open Sans, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        /* border: 1px solid ${pdict.wizard.colorPrimary}; */
+        color: ${pdict.wizard.colorPrimary};
+    }
+
+    .carQuiz .borderBtn {
+        background-color: #fff; /* Blue */
+        border: 1px solid ${pdict.wizard.colorPrimary};
+        color: ${pdict.wizard.colorPrimary};
+        padding: 10px 40px;
+        margin: 10px;
+        margin-top: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        line-height: 1.8;
+        font-size: 15px;
+        font-family: Open Sans, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .carQuiz .blueBtn {
+        background-color: ${pdict.wizard.colorPrimary}; /* Blue */
+        border: none;
+        color: white;
+        padding: 10px 50px;
+        margin: 10px;
+        margin-top: 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        color: #fff;
+        text-align: center;
+        line-height: 1.8;
+        font-size: 15px;
+        font-family: Open Sans, sans-serif;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .carQuiz .blueBtn:hover {
+        background-color: #00629e;
+    }
+
+    .carQuiz .borderBtn:hover {
+        border: 1px solid #00629e;
+        color: #00629e;
+    }
+
+    ul.qcontainer.steps {
+    width: 100% !important;
+    position: relative;
+    }
+    .qheader {
+        display: flex;
+        justify-content: space-between;
+    }
+    .qheader li {
+        float: none !important;
+        width: 20%;
+    }
+</style>
+<style>
+    /* @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"); */
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+</style>
+
+
+<isscript>
+
+    //id to represent the row number on the form
+    //var urlParams = '?cgid=' + pdict.wizard.category.ID + '&';
+
+</isscript>
+
+<div class="mx-auto carQuiz" style="width: 1000px;">
+
+    <div class="diy-summary" id="mainWizardContent">
+        <iscomment> <div class="card-header clearfix"> </iscomment>
+            <iscomment> <h4 class="pull-left">${pdict.wizard.title}</h4> </iscomment>
+            <iscomment><span class="edit-button pull-right">${Resource.msg('action.edit.step', 'checkout', null)}</span>
+            </iscomment>
+        <iscomment> </div> </iscomment>
+
+        <div class="card-body">
+
+            <div class="step-content" id="status" style="display: none">
+                <center><h3>Finding Products...</h3><br>
+                    <p></p>
+                    <div class="loader"></div>
+                </center>
+            </div>
+
+
+            <iscomment>
+                ###################################
+                ######## WIZARD BEGIN #############
+                ###################################
+            </iscomment>
+            <div class="fuelux" id="mainWizard">
+
+
+                <div class="wizard" data-initialize="wizard" id="myWizard">
+
+                        <ul class="qcontainer steps">
+
+                            <iscomment> ########## Eira's stuff ##############</iscomment>
+                            <div class="qheader">
+                                <isloop items="${pdict.wizard.pages}" alias="wPage" status="status">
+                                    <li class="active" data-step="${status.count}" data-name="step${status.count}"
+                                       href="carQuiz.html">${wPage.pageTitle}</li>
+                                </isloop>
+                            </div>
+
+                        </ul>
+
+
+                    
+
+
+                    <iscomment>
+                        ###################################
+                        ######## WIZARD PAGES #############
+                        ###################################
+                        Render each page of the wizard - only one will be shown at a time and controlled by JS
+                    </iscomment>
+                    <div class="step-content" id="steps" style="height: 380px">
+
+
+
+
+                        <isloop items="${pdict.wizard.pages}" alias="wPage2" status="status2">
+                            <div class="step-pane active sample-pane alert" data-step="${status2.count}">
+
+                                <div class="row text-center" style="justify-content:center; margin-left: -70px; padding-top: 40px;">
+                                    <h1>${wPage2.pageQuestion}</h1>
+                                    <iscomment> <div id="numSelected">abc</div> </iscomment>
+                                </div>
+
+
+<div class="actions" style="${(pdict.wizard.showSteps === false ? 'display:none' : '')}">
+                            <iscomment> <button type="button" class="btn btn-default btn-prev">
+                                <span class="glyphicon glyphicon-arrow-left"></span>Prev</button>
+                            <button type="button" id="next" class="btn btn-primary btn-next" data-last="Complete">Next
+                                <span class="glyphicon glyphicon-arrow-right"></span>
+                            </button> </iscomment>
+                        </div>
+
+                                <div class="row">
+                                    <br>
+                                    <p><br></p>
+                                </div>
+
+
+                                <div class="row" style="justify-content:center;">
+                                    <div class="boxes gridview" style="margin: auto;">
+
+                                        <isloop items="${wPage2.answers}" alias="answer" status="answerStatus">
+
+                                            <isif condition="${!empty(answer.answerText)}">
+                                                <div >
+                                                    <div>
+                                                        <label>
+                                                            <input type="checkbox" name=""/>
+                                                            <div class="icon-box answer"
+                                                                 data-filter="${answer.filter}"
+                                                                 data-attributename="${wPage2.pageAttribute}"
+                                                            >
+                                                                ${answer.answerText} <div class="invisible numberSelected ">0</div>
+                                                            </div>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </isif>
+
+                                        </isloop>
+
+                                        <p><br></p>
+                                    </div>
+                                </div>
+
+
+                                </p>
+                            </div>
+
+
+                            
+                        </isloop>
+
+                        
+
+<iscomment>
+                        ###############################################################
+                        ######## ACTION STEPS ("Prev / Next / Complete" ) #############
+                        ###############################################################
+                        This is the right side of the top "steps" row that outline the
+                        PREVIOUS, NEXT and COMPLETE buttons
+                    </iscomment>
+                    <div style="clear:both; margin:auto; width: 100%;">
+                    <iscomment> <div style="float: left"></div> </iscomment>
+                    <div style="text-align: center;" class="actions" style="${(pdict.wizard.showSteps === false ? 'display:none' : '')}">
+                        <button type="button" class="btn btn-default btn-prev">
+                            <span class="glyphicon glyphicon-arrow-left"></span>Back
+                        </button>
+                        <button type="button" id="next" class="btn btn-primary btn-next" data-last="Complete">Next
+                            <span class="glyphicon glyphicon-arrow-right"></span>
+                        </button>
+                    </div>
+                    </div>
+                    <iscomment>
+                        ######## END ACTION STEPS #############
+                    </iscomment>
+                    </div>
+                    <iscomment>
+                        ######## END WIZARD PAGES #############
+                    </iscomment>
+
+
+                </div>
+            </div>
+            <iscomment>
+                ######## WIZARD END #############
+            </iscomment>
+
+
+        </div>
+    </div>
+
+
+    <div id="results" style="display:none">
+        <h1>results here.... </h1>
+    </div>
+
+</div>
+
+
+<script type="text/javascript" language="javascript">
+
+    $(document).ready(function () {
+
+    });
+
+    var url = '?cgid=${pdict.wizard.category.ID}';
+    var attributeValueList = [];
+    var attributeName = '';
+    var attributeIndex = 1;
+    var separator = '%7c';
+    var selectedNum = 0;
+
+    /**
+     * Anytime someone clicks on an ANSWER, this function is run.
+     * When the answer is selected, highlight the border, otherwise when it is deselected, un-highlight the border.
+     *
+     * The other IMPORTANT thing that is happening here is that when an answer is selected, that value is added to
+     * an array.... this is used to construct the URL that will ultimately be used to show the results
+     */
+    $('.answer').on('click', function () {
+        var isSelected = $(this).hasClass("border-primary");
+        var filterValue = $(this).data('filter');
+
+        var numSelectedBox = $(this).find('.numberSelected');
+        
+
+        console.log("CLICKED ON AN ANSWER: is selected:" + isSelected + "\nfilter Value:" + filterValue);
+
+        if (isSelected) {
+
+            /**
+             *  if an answer is DE-selected, then also remove it from the attribute value array
+             */
+            for (let i = 0; i < attributeValueList.length; i++) {
+                if (attributeValueList[i] === filterValue) {
+                    attributeValueList.splice(i, 1);  // remove it
+                }
+            }
+
+            selectedNum--;
+
+            /**
+             * Room for improvement here... simply using border-primary and border-light.  We should probably separate out and
+             * do something fancier
+             * TODO
+             */
+            $(this).removeClass('border-primary');
+            $(this).addClass('border-light');
+            numSelectedBox.addClass('invisible');
+            numSelectedBox.hide();
+        } else {
+            // An answer has been selected so lets add this value to
+            //alert($(this).data('attributename'));
+
+            attributeValueList.push(filterValue);
+            attributeName = $(this).data('attributename')
+
+            /**
+             * Room for improvement here... simply using border-primary and border-light.  We should probably separate out and
+             * do something fancier
+             * TODO
+             */
+            $(this).removeClass('border-light');
+            $(this).addClass('border-primary');
+            numSelectedBox.removeClass('invisible');
+            numSelectedBox.addClass('widthInfo');
+            numSelectedBox.show();
+            selectedNum++;
+        }
+
+        // document.getElementById("numSelected").innerHTML = selectedNum;
+        // console.log('hi');
+        // console.log($(this).getElementsByClassName("numberSelected")[0].innerHTML);
+        // console.log($(this).find('numberSelectedd'));
+        $(this).find('.numberSelected').text(attributeValueList.length);
+    })
+
+    $('.btn-prev').on('click', function () {
+        console.log('prev');
+    });
+
+    /**
+     * IMPORTANT:
+     * Upon hitting "NEXT",
+     */
+
+    $('.btn-next').on('click', function (e, data) {
+        selectedNum = 0;
+        // var name = $(this).data('last');
+        var buttonText = $("#next").text();
+
+        console.log("'NEXT' - " + buttonText);
+
+        /**
+         * Build attribute URL for this particular page, then clear the values.
+         */
+        url = url + '&prefn' + attributeIndex + '=' + attributeName + '&prefv' + attributeIndex + '=';
+        attributeIndex++;
+        for (let i = 0; i < attributeValueList.length; i++) {
+            url = url + attributeValueList[i];
+
+            // Is this the last one?  If not, add a funky symbol (%7c) to append for the next one.
+            if (i === (attributeValueList.length - 1)) {
+                // do nothing
+            } else {
+                url = url + separator;
+            }
+        }
+        attributeValueList = [];
+        console.log("URL (so far):" + url);
+
+        /**
+         * Is this the last step?  If so, simply forward the location.href to the constructed URL.  Nothing should before
+         * done to the url at this point, it should be constructed and ready to go.
+         * DEBUG this by alert(url) to see exactly what URL will be forwarded to.... you should be able to copy this URL
+         * into a browser and see the desired results.
+         */
+        if (buttonText === 'Complete') {
+
+            //$("#mainWizardContent").hide();
+            $("#mainWizard").hide();
+            $("#status").show().delay(500).queue(function (n) {
+                // men-tops?cgid=men-tops&prefn1=activity&prefv1=City%7cClimbing&prefn2=apparelFeatures&prefv2=Breathable%7cHooded&prefn3=refinementColor&prefv3=Blue&prefn4=size&prefv4=L
+                // var url = "${URLUtils.url('Search-Show', 'cgid', pdict.wizard.category.ID)}";
+                var baseURL = "${URLUtils.abs('Search-Show')}";
+                console.log("FINAL URL:" + baseURL + url)
+                window.location.href = baseURL + url;
+            });
+
+        }
+
+    });
+
+    $(document).ajaxError(function () {
+        alert("an error occured!!");
+    })
+
+</script>
+
+
+
+

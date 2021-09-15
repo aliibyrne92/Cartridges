@@ -1,0 +1,122 @@
+
+<iscomment> <div class="d-flex"> </iscomment>
+<div class="primary-images col-12 col-sm-6">
+    <div class="stickySection">
+    <isif condition="${pdict.threekit !== null && pdict.threekit.enableThreekit && pdict.threekit.apiUrl && pdict.threekit.authToken && product
+                     .threekitAssetID}">
+        <div id="threekit-player" class="threekit-player"></div>
+        <div id="initial-configurator"></div>
+        <isif condition="${pdict.csrf !== null}">
+            <input type="hidden" name="${pdict.csrf.tokenName}" value="${pdict.csrf.token}" />
+        </isif>
+    <iselse/>
+        <isif condition="${product.images.small.length > 1}">
+            <iscomment> <div class="d-none d-lg-flex slick-paging stickySection">
+                <isloop items="${product.images.small}" var="image" status="loopStatus">
+                    <button class="slick-paging-btn ${loopStatus.first ? 'active' : ''}">
+                        <div class="slick-paging-image-container">
+                            <img src="${image.url}" alt="${image.alt} image number ${image.index}" class="img-fluid"
+                                itemprop="image" />
+                        </div>
+                    </button>
+                </isloop>
+            </div> </iscomment>
+            <div id="pdpCarousel-${product.id}" class="carousel slide" data-interval="0" data-prev="${Resource.msg('button.previous', 'common', null)}" data-next="${Resource.msg('button.next', 'common', null)}">
+                <isif condition="${product.images['large'].length > 1}">
+                    <ol class="carousel-indicators" aria-hidden="true">
+                        <isloop items="${product.images['large']}" var="image" status="loopStatus">
+                            <li data-target="${"#"}pdpCarousel-${product.id}" data-slide-to="${loopStatus.index}" class='<isif condition="${loopStatus.index == 0}">active</isif>'>
+                            </li>
+                        </isloop>
+                    </ol>
+                </isif>
+
+                <div class="carousel-inner" role="listbox">
+                    <isloop items="${product.images['large']}" var="image" status="loopStatus">
+                        <div class='carousel-item <isif condition="${loopStatus.index == 0}">active</isif>'>
+                            <img src="${image.url}" class="d-block img-fluid" alt="${image.alt} image number ${image.index}" itemprop="image" />
+                        </div>
+                    </isloop>
+                </div>
+                <isif condition="${product.images['large'].length > 1}">
+                    <a class="carousel-control-prev" href="${"#"}pdpCarousel-${product.id}" role="button" data-slide="prev">
+                        <span class="fa icon-prev" aria-hidden="true"></span>
+                        <span class="sr-only">${Resource.msg('button.previous', 'common', null)}</span>
+                    </a>
+                    <a class="carousel-control-next" href="${"#"}pdpCarousel-${product.id}" role="button" data-slide="next">
+                        <span class="fa icon-next" aria-hidden="true"></span>
+                        <span class="sr-only">${Resource.msg('button.next', 'common', null)}</span>
+                    </a>
+                </isif>
+            </div>
+        </isif>
+        <div class="product-carousel">
+            <isloop items="${product.images.large}" var="image" status="loopStatus">
+                <div class="carousel-item">
+                    <img src="${image.url}" alt="${image.alt} image number ${image.index}" class="img-fluid" style="min-height: 100px"
+                        itemprop="image" />
+                </div>
+            </isloop>
+        </div>
+    </isif>
+    <isinclude template="product/components/detailsSection" />
+    </div>
+</div>
+<isif condition="${pdict.threekit !== null && pdict.threekit.enableThreekit && pdict.threekit.apiUrl && pdict.threekit.authToken && product
+                     .threekitAssetID}">   
+<script>
+    var selectors = [
+        {
+            type: 'asset',
+            selector: ".select-electracolor",
+            name: 'External Color'
+        },
+        {
+            type: 'asset',
+            selector: ".select-electrawheelstyle",
+            name: 'Wheel Style'
+        },
+        {
+            type: 'string',
+            selector: ".select-electratrim",
+            name: 'Trim'
+        },
+        {
+            type:'asset',
+            selector: ".select-electracolor",
+            name: 'Exterior Color'
+        }
+    ]
+    window.onload = function() {
+        window.threekitPlayer({
+            authToken: "${pdict.threekit.authToken}",
+            el: document.getElementById("threekit-player"),
+            stageId: "${product.threekitStageID}",
+            assetId: "${product.threekitAssetID}",
+            showConfigurator: false,
+            showAR: true
+        })
+        .then(player => {
+            return player.getConfigurator();            
+        })
+        .then(configurator => {
+            configurator.getAttributes().forEach(configuration => {
+                var selector = selectors.find(el => el.name == configuration.name).selector;
+                document.querySelector(selector).addEventListener('change', function(e) {
+                    var selected = this.options[this.selectedIndex].getAttribute('data-attr-value');
+                    var newConfiguration = {};
+                    if(configuration.type == 'Asset') {
+                        newConfiguration[configuration.name] = {
+                            'assetId':  configuration.values.find(el => el.name == selected).assetId,
+                        };
+                    } else if(configuration.type == 'String') {
+                        newConfiguration[configuration.name] = selected;
+                    }
+                    configurator.setConfiguration(newConfiguration);
+                    e.stopPropagation();
+                });
+            });
+        });        
+    }        
+</script>
+</isif>

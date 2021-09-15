@@ -1,0 +1,480 @@
+<isif condition="${product.electraProductType === 'vehicle'}">
+    <iscomment> Payment Calculator Start </iscomment>
+
+    <ul class="nav nav-pills paymentOptionsTabs mb-4" id="pills-tab" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" id="finance-tab" data-toggle="pill" href="#finance" role="tab" aria-controls="finance" aria-selected="true">
+                ${Resource.msg('label.product.calc.finance', 'electra', null)}
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="lease-tab" data-toggle="pill" href="#lease" role="tab" aria-controls="lease" aria-selected="false">
+                ${Resource.msg('label.product.calc.lease', 'electra', null)}
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" id="cash-tab" data-toggle="pill" href="#cash" role="tab" aria-controls="cash" aria-selected="false">
+                ${Resource.msg('label.product.calc.cash', 'electra', null)}
+            </a>
+        </li>
+    </ul>
+
+    <div>  
+        <div class="mb-4" id="financePrice">
+            <div class="prices">
+                <span class="price monthlyRate">
+                    <isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />${Resource.msg('value.product.calc.financeAmount', 'electra', null)}
+                </span>
+                <span class="regText">
+                    ${Resource.msg('label.product.calc.month', 'electra', null)}
+                </span>
+            </div>
+            <div class="smallText">
+                ${Resource.msg('label.product.calc.taxBlurb', 'electra', null)}
+            </div>
+        </div>
+        <div class="mb-4 hide" id="leasePrice">
+            <div class="prices">
+                <span class="price monthlyRate">
+                    <isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />${Resource.msg('value.product.calc.leaseAmount', 'electra', null)}
+                </span>
+                <span class="regText">
+                    ${Resource.msg('label.product.calc.month', 'electra', null)}
+                </span>
+            </div>
+            <div class="smallText">
+                ${Resource.msg('label.product.calc.taxBlurb', 'electra', null)}
+            </div>
+        </div>
+        <div class="mb-4 hide" id="cashPrice">
+            <div class="prices">
+                <span class="price"></span>
+            </div>
+            <div class="smallText">
+                ${Resource.msg('label.product.calc.taxBlurbShort', 'electra', null)}
+            </div>
+        </div>
+        <div class="tab-content" id="pills-tabContent">
+            <div class="sectionTitle bold">
+                ${Resource.msg('label.product.calc.paymentOptions', 'electra', null)}
+            </div>
+            <div class="smallText mb-4">
+                ${Resource.msg('label.product.calc.selectPaymentOptions', 'electra', null)}
+            </div>
+            <div class="verticalSection finance" id="finance" role="tabpanel" aria-labelledby="finance-tab">
+                <div class="sectionTile active">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="sectionLabel align-middle">
+                                        ${Resource.msg('label.product.calc.finance', 'electra', null)}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-right">
+                                        <div>
+                                            <span class="price monthlyRate">
+                                                <isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />${Resource.msg('value.product.calc.financeAmount', 'electra', null)}
+                                            </span>
+                                            <span class="regText">
+                                                ${Resource.msg('label.product.calc.month', 'electra', null)}
+                                            </span>
+                                        </div>
+                                        <div>
+                                            ${Resource.msg('label.product.calc.taxBlurb', 'electra', null)}
+                                        </div>
+                                        <div class="bold">
+                                            <span class="downPmtRate">
+                                                <isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />${Resource.msg('value.product.calc.financeVal', 'electra', null)}
+                                            </span> ${Resource.msg('value.product.calc.aprVal', 'electra', null)}
+                                        </div>
+                                        <div>
+                                            ${Resource.msg('label.product.calc.expiration', 'electra', null)}
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="sectionBody text-center">
+                    <div class="downPaymentWrap">
+                        <div class="inputLabel bold mb-3">
+                            ${Resource.msg('label.product.calc.adjustDownPayment', 'electra', null)}
+                        </div>
+                        <div id="financeDownPayment" class="mb-2 downPayment">
+                            <span>
+                                <isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />
+                            </span>
+                            <input class="ml-2" type="text" name="downPayment" onchange="calcNewFinance()">
+                        </div>
+                        <div class="slidecontainer">
+                            <input type="range" value=14358 class="slider" id="myFinanceRange" onchange="calcNewFinance()">
+                        </div>
+                    </div>
+                    <div class="inputLabel bold mb-3 mt-4">
+                        ${Resource.msg('label.product.calc.financingTerm', 'electra', null)}
+                    </div>
+                    <div class="termWrap row text-center no-gutters">
+                        <button class="col termBtn" onclick="toggleActive(this)">
+                            <div class="term">
+                                ${Resource.msg('value.product.calc.financingTerm36', 'electra', null)}
+                            </div>
+                            <div class="rate">
+                                ${Resource.msg('value.product.calc.financingTermAPR', 'electra', null)}
+                            </div>
+                            <div class="smallText">
+                                ${Resource.msg('label.product.calc.interestRate', 'electra', null)}
+                            </div>
+                        </button>
+                        <button class="col termBtn mx-3 btnActive" onclick="toggleActive(this)">
+                            <div class="term">
+                                ${Resource.msg('value.product.calc.financingTerm48', 'electra', null)}
+                            </div>
+                            <div class="rate">
+                                ${Resource.msg('value.product.calc.financingTermAPR', 'electra', null)}
+                            </div>
+                            <div class="smallText">
+                                ${Resource.msg('label.product.calc.interestRate', 'electra', null)}
+                            </div>
+                        </button>
+                        <button class="col termBtn" onclick="toggleActive(this)">
+                            <div class="term">
+                                ${Resource.msg('value.product.calc.financingTerm60', 'electra', null)}
+                            </div>
+                            <div class="rate">
+                                ${Resource.msg('value.product.calc.financingTermAPR', 'electra', null)}
+                            </div>
+                            <div class="smallText">
+                                ${Resource.msg('label.product.calc.interestRate', 'electra', null)}
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="verticalSection lease" id="lease" role="tabpanel" aria-labelledby="lease-tab">
+                <div class="sectionTile">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="sectionLabel align-middle">
+                                        ${Resource.msg('label.product.calc.lease', 'electra', null)}
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="text-right">
+                                        <div>
+                                            <span class="price monthlyRate">
+                                                <isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />${Resource.msg('value.product.calc.leaseAmount', 'electra', null)}
+                                            </span>
+                                            <span class="regText">
+                                                ${Resource.msg('label.product.calc.month', 'electra', null)}
+                                            </span>
+                                        </div>
+                                        <div>
+                                            ${Resource.msg('label.product.calc.taxBlurb', 'electra', null)}
+                                        </div>
+                                        <div class="bold">
+                                            <span class="downPmtRate">
+                                                <isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />${Resource.msg('value.product.calc.lease36', 'electra', null)}
+                                            </span>
+                                        </div>
+                                        <div>
+                                            ${Resource.msg('label.product.calc.expiration', 'electra', null)}
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="sectionBody text-center hide">
+                    <div class="downPaymentWrap">
+                        <div class="inputLabel bold mb-3">Adjust Amount Due at Signing</div>
+                        <div id="leaseDownPayment" class="mb-2 downPayment">
+                            <span>
+                                <isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />    
+                            </span>
+                            <input class="ml-2" type="text" name="downPayment">
+                        </div>
+                        <div class="slidecontainer">
+                            <input type="range" value=14358 class="slider" id="myLeaseRange" onchange="calcNewLease()">
+                        </div>
+                    </div>
+                    <div class="inputLabel bold mb-3 mt-4">How Much Do You Drive?</div>
+                    <div class="termWrap row justify-content-md-center text-center no-gutters">
+                        <button class="col col-lg-4 milesBtn btnActive" onclick="toggleActiveMiles(this)">
+                            <div class="miles">10,000</div>
+                            <div class="rate">Miles per year</div>
+                        </button>
+                        <button class="col col-lg-4 milesBtn mx-3" onclick="toggleActiveMiles(this)">
+                            <div class="miles">15,000</div>
+                            <div class="rate">Miles per year</div>
+                        </button>
+                    </div>
+                    <div class="inputLabel bold mb-3 mt-4">Lease Term</div>
+                    <div class="termWrap row justify-content-md-center text-center no-gutters">
+                        <button class="col col-lg-3 termBtn btnActive" onclick="toggleActiveLease(this)">
+                            <div class="term">36</div>
+                            <div class="rate">Months</div>
+                        </button>
+                        <button class="col col-lg-3 termBtn mx-3" onclick="toggleActiveLease(this)">
+                            <div class="term">48</div>
+                            <div class="rate">Months</div>
+                        </button>
+                        <button class="col col-lg-3 termBtn" onclick="toggleActiveLease(this)">
+                            <div class="term">60</div>
+                            <div class="rate">Months</div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="verticalSection cash" id="cash" role="tabpanel" aria-labelledby="lease-tab">
+                <div class="sectionTile">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="sectionLabel align-middle">Cash</div>
+                                </td>
+                                <td>
+                                    <div class="text-right">
+                                        <div class="cashValue prices isNotBold">
+                                            <isset name="price" value="${product.price}" scope="page" />
+                                            <isinclude template="product/components/pricing/main" />
+                                        </div>
+                                        <div>incl. taxes & fees</div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="sectionBody text-center hide">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <iscomment> Payment Calculator End </iscomment>
+</isif>
+
+<script type="text/javascript">
+
+    // defining and initializing variables
+    console.log("we are writing scripts in the template!");
+    var container = document.getElementsByClassName("cashValue")[0];
+    var valueContainer = container.getElementsByClassName("value")[0];
+    var cashValue = parseFloat(valueContainer.getAttribute('content'));
+    console.log('value type: ', typeof(cashValue));
+    console.log('value: ', cashValue);
+    var section = document.getElementsByClassName('sectionTile');
+    var previousSection = document.getElementById('finance').getElementsByClassName("sectionTile")[0];
+    var financeTab = document.getElementById('finance-tab');
+    var leaseTab = document.getElementById('lease-tab');
+    var cashTab = document.getElementById('cash-tab');
+    var financePrice = document.getElementById('financePrice');
+    var leasePrice = document.getElementById('leasePrice');
+    var cashPrice = document.getElementById('cashPrice');
+    var financeSection = document.getElementsByClassName('finance')[0];
+    var leaseSection = document.getElementsByClassName('lease')[0];
+    var cashSection = document.getElementsByClassName('cash')[0];
+    var financeSlider = document.getElementById('myFinanceRange');
+    var leaseSlider = document.getElementById('myLeaseRange');
+    var financeDownPayment = document.getElementById('financeDownPayment').getElementsByTagName("input")[0];
+    financeDownPayment.value = parseInt(cashValue/3);
+    var leaseDownPayment = document.getElementById('leaseDownPayment').getElementsByTagName("input")[0];
+    leaseDownPayment.value = parseInt(cashValue/3);
+    var financeTerms = document.getElementById('finance').getElementsByClassName('termBtn');
+    var finTerms = [36, 48, 60];
+    var finTerm = 48;
+    var r = 0.003;
+    var leaseMiles = document.getElementById('lease').getElementsByClassName('milesBtn');
+    var leaseTerms = document.getElementById('lease').getElementsByClassName('termBtn');
+    calcNewFinance();
+    var lTerms = [36, 48, 60];
+    var lTerm = 48;
+    var lMileage = 10000;
+    var lMileages = [10000, 15000];
+    calcNewLease();
+    document.getElementById('cashPrice').getElementsByClassName('price')[0].innerHTML = '<isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />' + cashValue.toFixed(2).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    
+
+    // When finance tab is clicked, activate finance section and deactivate others & update high level price
+    financeTab.onclick = function() {
+        goToLink('finance');
+        financePrice.classList.remove("hide");
+        leasePrice.classList.add("hide");
+        cashPrice.classList.add("hide");
+    }
+
+    // When lease tab is clicked, activate finance section and deactivate others & update high level price
+    leaseTab.onclick = function() {
+        goToLink('lease');
+        financePrice.classList.add("hide");
+        leasePrice.classList.remove("hide");
+        cashPrice.classList.add("hide");
+    }
+
+    // When cash tab is clicked, activate finance section and deactivate others & update high level price
+    cashTab.onclick = function() {
+        goToLink('cash');
+        financePrice.classList.add("hide");
+        leasePrice.classList.add("hide");
+        cashPrice.classList.remove("hide");
+    }
+    section[0].onclick = function() {
+        goToLink('finance');
+    }
+    section[1].onclick = function() {
+        goToLink('lease');
+    }
+    section[2].onclick = function() {
+        goToLink('cash');
+    }
+    function goToLink(tabId) {
+        var currentSection = document.getElementById(tabId).getElementsByClassName("sectionTile")[0];
+        currentSection.scrollIntoView({block: "nearest"});
+        if (previousSection !== currentSection) {
+            currentSection.classList.add("active");
+            currentSection.nextElementSibling.classList.remove("hide");
+            if (previousSection !== undefined) {
+                previousSection.classList.remove("active");
+                previousSection.nextElementSibling.classList.add("hide");
+            }
+        }
+        if (tabId == 'finance') {
+            financeTab.classList.add("active");
+            leaseTab.classList.remove("active");
+            cashTab.classList.remove("active");
+            financePrice.classList.remove("hide");
+            leasePrice.classList.add("hide");
+            cashPrice.classList.add("hide");
+        } else if (tabId == 'lease') {
+            financeTab.classList.remove("active");
+            console.log('finance tab status is: ', financeTab.classList);
+            leaseTab.classList.add("active");
+            cashTab.classList.remove("active");
+            financePrice.classList.add("hide");
+            leasePrice.classList.remove("hide");
+            cashPrice.classList.add("hide");
+        } else if (tabId == 'cash') {
+            financeTab.classList.remove("active");
+            leaseTab.classList.remove("active");
+            cashTab.classList.add("active");
+            financePrice.classList.add("hide");
+            leasePrice.classList.add("hide");
+            cashPrice.classList.remove("hide");
+        }
+        previousSection = currentSection;
+        return false;
+    }
+
+    // Finance Section
+
+    // Initialize Finance Slider and Input and connect them
+    financeSlider.setAttribute('min', 0);
+    financeSlider.setAttribute('max', cashValue);
+    financeSlider.setAttribute('value', cashValue/3);
+    setValue = ()=>{
+		const
+			newValue = Number( (financeSlider.value - financeSlider.min) * 100 / (financeSlider.max - financeSlider.min) ),
+			newPosition = 10 - (newValue * 0.2);
+		financeDownPayment.value = financeSlider.value;
+	};
+    document.addEventListener("DOMContentLoaded", setValue);
+    financeSlider.addEventListener('input', setValue);
+    financeDownPayment.addEventListener("change", event => {
+        financeSlider.value = financeDownPayment.value;
+    });
+
+    // Update finance values
+    function calcNewFinance() {
+        var newCashValue = cashValue - financeDownPayment.value;
+        var tempVal = financeDownPayment.value;
+        var downPmt = tempVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        var val1 = r*((1+r)**finTerm);
+        var val2 = ((1+r)**finTerm)-1;
+        var calcRate = newCashValue*(val1/val2);
+        document.getElementById('financePrice').getElementsByClassName('monthlyRate')[0].innerHTML = '<isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />' + calcRate.toFixed(2);
+        document.getElementById('finance').getElementsByClassName('monthlyRate')[0].innerHTML = '<isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />' + calcRate.toFixed(2);
+        document.getElementById('finance').getElementsByClassName('downPmtRate')[0].innerHTML = '<isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />' + downPmt + ' down, ' + finTerm + ' months, ';
+    }
+
+    function toggleActive(el) {
+        el.classList.add('btnActive');
+        for (let i = 0; i < financeTerms.length; i++) {
+            const element = financeTerms[i];
+            if (financeTerms[i] !== el) {
+                financeTerms[i].classList.remove("btnActive");
+            } else {
+                finTerm = finTerms[i];
+            }
+        }
+        calcNewFinance();
+    }
+
+    // Lease Section
+    leaseSlider.setAttribute('min', 0);
+    leaseSlider.setAttribute('max', cashValue);
+    leaseSlider.setAttribute('value', cashValue/3);
+    setValue2 = ()=>{
+		const
+			newValue = Number( (leaseSlider.value - leaseSlider.min) * 100 / (leaseSlider.max - leaseSlider.min) ),
+			newPosition = 10 - (newValue * 0.2);
+		leaseDownPayment.value = leaseSlider.value;
+	};
+    document.addEventListener("DOMContentLoaded", setValue2);
+    leaseSlider.addEventListener('input', setValue2);
+    leaseDownPayment.addEventListener("change", event => {
+        leaseSlider.value = leaseDownPayment.value;
+    });
+    function calcNewLease() {
+        var newCashValue = cashValue - leaseDownPayment.value;
+        var mileageDiff;
+        if (lMileage == 10000) {
+            mileageDiff = 3000;
+        } else {
+            mileageDiff = 2000;
+        }
+        newCashValue = newCashValue - mileageDiff;
+        var tempVal = leaseDownPayment.value;
+        var downPmt = tempVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        var val1 = r*((1+r)**lTerm);
+        var val2 = ((1+r)**lTerm)-1;
+        var calcRate = newCashValue*(val1/val2);
+
+        document.getElementById('leasePrice').getElementsByClassName('monthlyRate')[0].innerHTML = '<isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />' + calcRate.toFixed(2);
+        document.getElementById('lease').getElementsByClassName('monthlyRate')[0].innerHTML = '<isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />' + calcRate.toFixed(2);
+        document.getElementById('lease').getElementsByClassName('downPmtRate')[0].innerHTML = '<isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />' + downPmt + ' due at signing, ' + lMileage + ' miles/year, ' + lTerm + ' months';
+    }
+
+    function toggleActiveMiles(el) {
+        el.classList.add('btnActive');
+        for (let i = 0; i < leaseMiles.length; i++) {
+            const element = leaseMiles[i];
+            if (leaseMiles[i] !== el) {
+                leaseMiles[i].classList.remove("btnActive");
+            } else {
+                lMileage = lMileages[i];
+            }
+        }
+        calcNewLease();
+    }
+
+    function toggleActiveLease(el) {
+        el.classList.add('btnActive');
+        for (let i = 0; i < leaseTerms.length; i++) {
+            const element = leaseTerms[i];
+            if (leaseTerms[i] !== el) {
+                leaseTerms[i].classList.remove("btnActive");
+            } else {
+                lTerm = lTerms[i];
+            }
+        }
+        calcNewLease();
+    }
+</script>

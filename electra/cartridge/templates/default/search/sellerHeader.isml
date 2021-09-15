@@ -1,0 +1,56 @@
+<isset name="seller" value="${pdict.seller.custom}" scope="page" />
+<div class="row mb-5">
+    <div class="marketplacer-seller-header col-3 ">
+        <isif condition="${seller.logo}">
+            <img class="border p-1" src="${seller.logo}" alt="Seller Logo Image"/>
+        </isif>
+    </div>
+    <div class="marketplacer-seller-body col-6">
+        <h1><isprint value="${seller.businessName}" /></h1>
+        <isif condition="${seller.storeDescription}">
+            <div class="mb-2"><isprint value="${seller.storeDescription}" /></div>
+        </isif>
+        <div class="marketplacer-address">
+	        <div class="pull-left">
+	            <h3 class="mb-1">${Resource.msg('label.seller.address', 'marketplacer', null)}</h3>
+                <isif condition="${seller.addressLine1}">
+                    <div><isprint value="${seller.addressLine1}" /></div>
+                </isif>
+                <isif condition="${seller.addressLine2}">
+                    <div><isprint value="${seller.addressLine2}" /></div>
+                </isif>
+                <isif condition="${seller.city}">
+                    <div><isprint value="${seller.city}" /></div>
+                </isif>
+                <isif condition="${seller.state}">
+                    <div><isprint value="${seller.state}" /></div>
+                </isif>
+                <isif condition="${seller.country}">
+                    <div><isprint value="${seller.country}" /></div>
+                </isif>
+                <isif condition="${seller.postcode}">
+                    <div><isprint value="${seller.postcode}" /></div>
+                </isif>
+                <isif condition="${seller.phone}">
+                    <div>${Resource.msgf('label.seller.contact', 'marketplacer', null, seller.phone)}</div>
+                </isif>
+                <isif condition="${seller.emailAddress}">
+                    <div>${Resource.msgf('label.seller.email', 'marketplacer', null, seller.emailAddress)}</div>
+                </isif>
+		    </div>
+        </div>
+        <isif condition="${seller.openingHours}">
+            <div class="marketplacer-opening-hours">${Resource.msgf('label.seller.openinghours', 'marketplacer', null, seller.openingHours)}</div>
+        </isif>
+    </div>
+    <div class="col-3">
+        <div class="pull-left">
+            <isif condition="${seller.storeImages}">
+                <isset name="storeImages" value="${JSON.parse(seller.storeImages)}" scope="page" />
+                <isif condition="${storeImages && storeImages.length > 0}">
+                    <img src="${storeImages[0].url}" alt="Seller Store Image"/>
+                </isif>
+            </isif>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<isset name="product" value="${pdict.product}" scope="page" />
+<isset name="recommendations" value="${product.raw.getOrderableRecommendations()}" scope="page" />
+<isif condition="${recommendations.size() !== 0}">
+    <isinclude template="/components/modules" />
+    <div class="homepage-products-title">
+        <h2><isprint value="${Resource.msg('label.recommendations', 'cart', null)}" encoding="on"/></h2>
+    </div>
+
+    <div class="homepage-product-listing row">
+    <isloop items="${recommendations}" var="recommendation">
+        <div class="col-6 col-sm-4">
+            <isinclude url="${URLUtils.url('Tile-Show', 'pid', recommendation.recommendedItemID, 'pview', 'tile', 'ratings', true, 'swatches', true, 'showQuickView', false)}"/>
+        </div>
+        
+    </isloop>
+    </div>
+        
+</isif>

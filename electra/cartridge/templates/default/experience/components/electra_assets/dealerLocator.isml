@@ -1,0 +1,32 @@
+<style>
+    .dlContainer {
+        padding: 3rem 2rem 3rem 0;
+    }
+
+    .dlContainer h3 {
+        font-size: 2rem;
+        font-weight: 800;
+    }
+
+    .dlZipInput {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid black;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+</style>
+
+<div class="dlContainer">
+    <h3>${pdict.titleText}</h3>
+    <p style="padding: 1rem 0 2rem;">${pdict.subtitleText}</p>
+    
+    <input class="dlZipInput" type="text" placeholder="${pdict.searchPlaceholder}"/>
+    <a href="${pdict.redirectURL}">
+        <button class="btn btn-primary">
+            ${pdict.checkZipButtonText}
+        </button>
+    </a>
+</div>

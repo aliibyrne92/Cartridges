@@ -1,0 +1,28 @@
+{
+    "name": "Full Width Carousel",
+    "group": "qb_custom_layouts",
+    "attribute_definition_groups": [
+        {
+            "id": "row_details",
+            "name": "Row Details",
+            "attribute_definitions": [
+                {
+                    "id": "bg_colour",
+                    "name": "Background Colour",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                }
+            ]
+        }
+    ],
+    "region_definitions": [
+        {
+            "id":"slides",
+            "name":"Slides",
+            "component_type_exclusions": []
+        }
+    ]
+}

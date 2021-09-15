@@ -1,0 +1,37 @@
+<style>
+
+.hibOuter {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.hibOuter:hover img {
+    transform: scale(1.075);
+}
+
+.hibOuter .btnContainer{
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.hibText {
+    text-align: center;
+}
+</style>
+
+<div class="hibOuter" style="">
+    <source srcset="${pdict.image.src.desktop}" media="(min-width: 768px)"/>
+    <img style="height:${pdict.imageHeight};width:${pdict.imageWidth}; --focal-point-x:${pdict.image.focalPointX}; --focal-point-y:${pdict.image.focalPointY};" src="${pdict.image.src.desktop}" <isif condition="${pdict.image.alt}">alt="${pdict.image.alt}" title="${pdict.image.alt}"</isif> />
+
+    <div class="btnContainer" style="display:${pdict.buttonDisplay};top: ${pdict.buttonTop}%; left: ${pdict.buttonLeft}%;">
+        <a href="${pdict.buttonURL}">
+            <div class="btn" style="border-radius:${pdict.buttonBorderRad};background-color:${pdict.buttonColour};font-size:${pdict.buttonTextSize};color:${pdict.buttonTextColour};padding:${pdict.buttonPadding};border:${pdict.buttonBorder}">
+                ${pdict.buttonText}
+            </div> 
+        </a>   
+    </div>
+</div>
+<div class="hibText" style="display:${pdict.textDisplay}">
+    <isprint value="${pdict.text}" encoding="off"/>
+</div>

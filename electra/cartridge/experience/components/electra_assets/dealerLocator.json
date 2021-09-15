@@ -1,0 +1,53 @@
+{
+    "name": "Dealer Locator",
+    "description": "Component to enter customer's zipcode and redirect to a predefined page",
+    "group": "electra_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "zip_detail",
+            "name": "Zip Details",
+            "attribute_definitions": [
+                {
+                    "id": "title_text",
+                    "name": "Title Text",
+                    "description": "Defaults to 'Dealer Locator'",
+                    "type": "string",
+                    "required": false,
+                    "default_value": "Dealer Locator"
+                },
+                {
+                    "id": "subtitle_text",
+                    "name": "Subtitle Text",
+                    "description": "Defaults to 'There’s a perfect Electra for everyone. Find yours at the Electra dealership that’s nearest to you.'",
+                    "type": "string",
+                    "required": false,
+                    "default_value": "There’s a perfect Electra for everyone. Find yours at the Electra dealership that’s nearest to you."
+                },
+                {
+                    "id": "search_placeholder",
+                    "name": "Search placeholder text",
+                    "description": "Defaults to 'City or Zip Code'",
+                    "type": "string",
+                    "required": false,
+                    "default_value": "City or Zip Code"
+                },
+                {
+                    "id": "check_zip_button_text",
+                    "name": "Button Text",
+                    "description": "Defaults to 'SEARCH'",
+                    "type": "string",
+                    "required": false,
+                    "default_value": "SEARCH"
+                }, 
+                {
+                    "id": "redirect_url",
+                    "name": "Page Redirect",
+                    "type": "url",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}
+  

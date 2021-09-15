@@ -1,0 +1,52 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/3columnAdjustable.css');
+</isscript>
+<style>
+    .region_square:before {
+        padding-top: 0;
+    }
+
+    .fullWidth{
+        width: 100vw; 
+        margin-left: calc(50% - 50vw) !important; 
+        margin-right: calc(50% - 50vw) !important; 
+        max-width: 100vw; 
+        border: none;   
+    }
+
+    .fullWidth .region.col-12.col-md-12.px-2 {
+        padding: 0 !important;
+    }
+</style>
+
+<div class="fullWidth" style="background-color:${pdict.bgColour}">
+    <div class="container">
+        <div class="row mx-n2" style="background-color:${pdict.bgColour}">
+            <div class="mobileWidthOverride" style="flex: 0 0 ${pdict.col1Width};max-width: ${pdict.col1Width};width: ${pdict.col1Width};">
+                <isprint value="${pdict.regions.column1.setClassName("region region_square px-2").render()}" encoding="off"/>
+            </div>
+            <div class="mobileWidthOverride" style="flex: 0 0 ${pdict.col2Width};max-width: ${pdict.col2Width};width: ${pdict.col2Width};">
+                <isprint value="${pdict.regions.column2.setClassName("region region_square px-2").render()}" encoding="off"/>
+            </div>
+            <div class="mobileWidthOverride" style="flex: 0 0 ${pdict.col3Width};max-width: ${pdict.col3Width};width: ${pdict.col3Width};">
+                <isprint value="${pdict.regions.column3.setClassName("region region_square px-2").render()}" encoding="off"/>
+            </div>
+            <div class="mobileWidthOverride" style="flex: 0 0 ${pdict.col4Width};max-width: ${pdict.col4Width};width: ${pdict.col4Width};">
+                <isprint value="${pdict.regions.column4.setClassName("region region_square px-2").render()}" encoding="off"/>
+            </div>
+            <div class="mobileWidthOverride" style="flex: 0 0 ${pdict.col5Width};max-width: ${pdict.col5Width};width: ${pdict.col5Width};">
+                <isprint value="${pdict.regions.column5.setClassName("region region_square px-2").render()}" encoding="off"/>
+            </div>
+            <div class="mobileWidthOverride" style="flex: 0 0 ${pdict.col6Width};max-width: ${pdict.col6Width};width: ${pdict.col6Width};">
+                <isprint value="${pdict.regions.column6.setClassName("region region_square px-2").render()}" encoding="off"/>
+            </div>
+            <div class="mobileWidthOverride" style="flex: 0 0 ${pdict.col7Width};max-width: ${pdict.col7Width};width: ${pdict.col7Width};">
+                <isprint value="${pdict.regions.column7.setClassName("region region_square px-2").render()}" encoding="off"/>
+            </div>
+            <div class="mobileWidthOverride" style="flex: 0 0 ${pdict.col5Width};max-width: ${pdict.col8Width};width: ${pdict.col8Width};">
+                <isprint value="${pdict.regions.column8.setClassName("region region_square px-2").render()}" encoding="off"/>
+            </div>
+        </div>
+    </div>
+</div>

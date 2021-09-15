@@ -1,0 +1,63 @@
+.refinements ul li button{
+    color: #3E3E3C;
+    font-weight: 600;
+    font-size: .9rem;
+    text-align: left;
+}
+
+.refinements ul li button i{
+    color: #DDDBDA;
+    font-size: 1.2rem;
+    transform: translateY(2px);
+}
+
+.refinement li{
+    margin-left: 0;
+    padding-right: 0;
+}
+
+.refinements ul li button.disabled{
+    display: none;
+}
+
+.refinements .card{
+    border: none;
+}
+
+.refinements .card-header{
+    position: relative;
+    padding-left:0;
+    padding-bottom: 0;
+}
+
+.refinements .card.active .card-header:after {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+}
+
+.refinement.refinement-category li {
+    margin-left: 0;
+}
+.refinements .values{
+    margin-bottom: 0;
+}
+
+@media (min-width: 1200px) {
+    .refinements .card-header:after {
+        width: 1.25em;
+        line-height: 0;
+        content: url(../images/arrow-icon.svg);
+        -webkit-transition: -webkit-transform 0.35s ease;
+        transition: -webkit-transform 0.35s ease;
+        -o-transition: transform 0.35s ease;
+        transition: transform 0.35s ease;
+        transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+        -webkit-transform-origin: .5em 50%;
+            -ms-transform-origin: .5em 50%;
+                transform-origin: .5em 50%;
+        position: absolute;
+        right: 0;
+        top: calc(50% - 2px);
+    }
+}

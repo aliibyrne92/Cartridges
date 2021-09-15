@@ -1,0 +1,208 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/guidedSell.css');
+    assets.addJs('/js/guidedSell.js');
+</isscript>
+
+<style>
+    .progBarOn {
+        border-top: 3px solid ${pdict.bgOffset} !important;
+    }
+
+    .progBar {
+        border-top: 3px solid #585858;
+    }
+</style>
+
+<div class="guideContainer" style="background-color: ${pdict.backgroundColour};text-transform: ${pdict.textTransform};">
+
+    <div class="innerCont">
+        <div class="mainTitleG">${pdict.title}</div>
+        
+        <div style="display:${pdict.showFormTab}">
+            <div class="row" style="margin-bottom: 1rem;">
+                <div class="col-3">
+                    <div id="progOneForm" class="progBar progBarOn"></div>
+                </div>
+                <div class="col-3">
+                    <div id="progTwoForm" class="progBar"></div>
+                </div>
+                <div class="col-3">
+                    <div id="progThreeForm" class="progBar progBarOff"></div>
+                </div>
+                <div class="col-3">
+                    <div id="progFourForm" class="progBar progBarOff"></div>
+                </div>
+            </div>
+        </div>
+        <div style="display:${pdict.hideFormTab}">
+            <div class="row" style="margin-bottom: 1rem;">
+                <div class="col-4">
+                    <div id="progOne" class="progBar progBarOn"></div>
+                </div>
+                <div class="col-4">
+                    <div id="progTwo" class="progBar"></div>
+                </div>
+                <div class="col-4">
+                    <div id="progThree" class="progBar progBarOff"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="stepOneG">
+            <div class="subTitleG">${pdict.q1}</div>
+
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="imgBoxG" onclick="optionSelected(this)">
+                        <div class="imgG" style="background-image:url(${pdict.q1a1image.src.desktop});">
+                        </div>
+                        <div class="imgTitle">${pdict.q1a1}</div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="imgBoxG" onclick="optionSelected(this)">
+                        <div class="imgG" style="background-image:url(${pdict.q1a2image.src.desktop});">
+                        </div>
+                        <div class="imgTitle">${pdict.q1a2}</div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="imgBoxG" onclick="optionSelected(this)">
+                        <div class="imgG" style="background-image:url(${pdict.q1a3image.src.desktop});">
+                        </div>
+                        <div class="imgTitle">${pdict.q1a3}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="nextBttnG" style="color: ${pdict.btnColour}; border: 1px solid ${pdict.btnColour}; background-color: ${pdict.btnOffsetColour};"  onclick="pageTwo()">
+                Next
+            </div>
+        </div>
+
+        <div id="stepTwoG" style="display:none;">
+
+            <div class="subTitleG">${pdict.q2}</div>
+
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="imgBoxG" onclick="optionSelected(this)">
+                        <div class="imgG" style="background-image:url(${pdict.q2a1image.src.desktop});">
+                        </div>
+                        <div class="imgTitle">${pdict.q2a1}</div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="imgBoxG" onclick="optionSelected(this)">
+                        <div class="imgG" style="background-image:url(${pdict.q2a2image.src.desktop});">
+                        </div>
+                        <div class="imgTitle">${pdict.q2a2}</div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="imgBoxG" onclick="optionSelected(this)">
+                        <div class="imgG" style="background-image:url(${pdict.q2a3image.src.desktop});">
+                        </div>
+                        <div class="imgTitle">${pdict.q2a3}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="nextBttnG" onclick="pageThree()" style="
+            color: ${pdict.btnColour}; border: 1px solid ${pdict.btnColour}; background-color: ${pdict.btnOffsetColour};">Next</div>
+        </div>
+
+        <div id="stepThreeG" style="display:none;">
+
+            <div class="subTitleG">${pdict.q3}</div>
+
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="imgBoxG" onclick="optionSelected(this)">
+                        <div class="imgG" style="background-image:url(${pdict.q3a1image.src.desktop});">
+                        </div>
+                        <div class="imgTitle">${pdict.q3a1}</div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="imgBoxG" onclick="optionSelected(this)">
+                        <div class="imgG" style="background-image:url(${pdict.q3a2image.src.desktop});">
+                        </div>
+                        <div class="imgTitle">${pdict.q3a2}</div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="imgBoxG" onclick="optionSelected(this)">
+                        <div class="imgG" style="background-image:url(${pdict.q3a3image.src.desktop});">
+                        </div>
+                        <div class="imgTitle">${pdict.q3a3}</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nextBttnG" onclick="pageFour()" style="color: ${pdict.btnColour}; border: 1px solid ${pdict.btnColour}; background-color: ${pdict.btnOffsetColour}; display:${pdict.showFormTab}">Next</div>
+            
+            <a style="display:${pdict.hideFormTab}" href="${pdict.submitURL}">
+                <div class="submitBttn" style="background-color: ${pdict.btnColour}; border: 1px solid ${pdict.btnColour}; color: ${pdict.btnOffsetColour};">Submit</div>
+            </a>
+        </div>
+
+        <div style="display:${pdict.showFormTab}">
+            <div id="stepFourG" style="display:none;">
+                <div class="subTitleG">${pdict.formLabel}</div>
+
+                <form>
+                    <div style="display:${pdict.showRadioBtn}">
+                        <label class="mainTitleG">${pdict.radioBtnLabel}</label>
+                        <div class="form-row">
+                            <iscomment>
+                            <button type="button" class="btn btn-primary btn-lg heightBttns">${pdict.radioBtnOpt1}</button>
+                            <button type="button" class="btn btn-secondary btn-lg heightBttns">${pdict.radioBtnOpt2}</button>
+                            </iscomment>
+                        </div>
+                        
+                        <input type="radio" value="${pdict.radioBtnOpt1}" name="optionsList">
+                        <label >${pdict.radioBtnOpt1}</label><br>
+                        <input type="radio" value="${pdict.radioBtnOpt2}" name="optionsList">
+                        <label >${pdict.radioBtnOpt2}</label><br>
+                        <input type="radio" value="${pdict.radioBtnOpt3}" name="optionsList">
+                        <label >${pdict.radioBtnOpt3}</label><br>
+                    </div>
+                    <iscomment>
+                    <label class="formLabelG" style="margin-top: 1.3rem;">Height</label>
+                    <div class="form-row">
+
+                        <button type="button" class="btn btn-primary btn-lg heightBttns">1,75 - 1,85</button>
+                        <button type="button" class="btn btn-secondary btn-lg heightBttns">1,85 +</button>
+                    </div>
+                    </iscomment>
+
+                    <div style="display:${pdict.showTextInput}">
+                        <label class="mainTitleG" style="margin-top: 1.3rem;">${pdict.textInputLabel}</label>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <input class="form-control" id="inputEmail4" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display:${pdict.showOptionList}">
+                        <label class="mainTitleG" style="margin-top: 1.3rem;">${pdict.optionListLabel}</label>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <select class="form-control mainTitleG">
+                                    <option value="${pdict.option1}">${pdict.option1}</option>
+                                    <option value="${pdict.option2}">${pdict.option2}</option>
+                                    <option value="${pdict.option3}">${pdict.option3}</option>
+                                    </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <a href="${pdict.submitURL}">
+                    <div class="submitBttn" style="background-color: ${pdict.btnColour}; border: 1px solid ${pdict.btnColour}; color: ${pdict.btnOffsetColour};">Submit</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

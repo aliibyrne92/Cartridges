@@ -1,0 +1,20 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/blogTitle.css');
+</isscript>
+
+<div class="container bTContainer">
+    <div class="btImageContainer">
+        <source srcset="${pdict.image.src.desktop}" media="(min-width: 768px)"/>
+        <img class="blogTitleImage" style="--focal-point-x:${pdict.image.focalPointX}; --focal-point-y:${pdict.image.focalPointY};" src="${pdict.image.src.desktop}" <isif condition="${pdict.image.alt}">alt="${pdict.image.alt}" title="${pdict.image.alt}"</isif> />
+    </div>
+
+    <div class="container blogText" style="text-align:${pdict.textAlign}">
+        <h2 style="font-family:${pdict.textFont};"">
+            <isprint value="${pdict.pageTitle}" encoding="off"/>
+        </h2>
+        <div class="btHashtag" style="display:${pdict.showHashtag}">
+            <isprint value="${pdict.hashtag}" encoding="off"/>
+        </div>
+    </div>
+</div>

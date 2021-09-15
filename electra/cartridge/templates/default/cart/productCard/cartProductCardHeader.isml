@@ -1,0 +1,32 @@
+<isif condition="${lineItem.isBonusProductLineItem}" />
+	<div>${Resource.msg('msg.bonus.product','cart',null)}</div>
+</isif>
+<div class="line-item-header">
+    <div class="line-item-name">
+        ${lineItem.productName}
+    </div>
+    <isif condition="${!lineItem.isBonusProductLineItem}"/>
+        <div class="remove-line-item d-lg-none">
+            <isinclude template="components/deleteButton" />
+        </div>
+    </isif>
+</div>
+
+  <iscomment>Marketplacer Custom Code: Start</iscomment>
+    <isscript>
+		var Site = require('dw/system/Site');
+		var sellerPagesEnabled = Site.current.preferences.custom.sellerPagesEnabled;
+	</isscript>
+    <isif condition="${sellerPagesEnabled}">
+    <isset name="seller" value="${lineItem.seller}" scope="page" />
+        <div class="">
+            <span>${Resource.msg('label.product.seller', 'marketplacer', null)} 
+	            <isif condition="${sellerPagesEnabled}">
+	            	<a href="${dw.web.URLUtils.https('Search-Show', 'q', seller.businessName)}">${seller.businessName}</a>
+	            <iselse/>
+	            	${seller.businessName}
+	            </isif>	
+            </span>
+        </div>
+    </isif>
+    <iscomment>Marketplacer Custom Code: End</iscomment>

@@ -1,0 +1,771 @@
+@font-face {
+    font-family:Lato;
+    src: url('../fonts/Lato-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family:Lato;
+    src: url('../fonts/Lato-Thin.woff') format('woff');
+    font-weight:300;
+}
+
+@font-face {
+    font-family:Lato;
+    src: url('../fonts/Lato-Regular.woff') format('woff');
+    font-weight:500;
+}
+
+@font-face {
+    font-family:Lato;
+    src: url('../fonts/Lato-Semibold.woff') format('woff');
+    font-weight:700;
+}
+
+@font-face {
+    font-family:Lato;
+    src: url('../fonts/Lato-Bold.woff') format('woff');
+    font-weight:800;
+}
+
+@font-face {
+    font-family:Lato;
+    src: url('../fonts/Lato-Black.woff') format('woff');
+    font-weight:900;
+}
+
+@font-face {
+    font-family:MercBold;
+    src: url('../fonts/CorporateABold.otf') format('opentype');
+}
+
+@font-face {
+    font-family:MercLight;
+    src: url('../fonts/CorporateALight.ttf') format('truetype');
+}
+
+
+
+/** ----- EDIT COLOUR AND FONT VALUES HERE ----- **/
+:root{
+    --action-colour: #00ADEF;
+    --action-hover-colour: #0290c9;
+    --action-offset-colour: #fff;
+    --link-colour: colour;
+    --text-colour: #000000;
+    --bg-colour: colour;
+    --font-fam: HelveticaNeue;
+    --secondary-colour: #7E7E7E;
+    --header-bg-colour: #000000;
+    --header-text-colour: #fff;
+    --footer-bg-colour: #000;
+    --footer-text-colour: #fff;
+}
+
+/* -- Main body style -- */
+body{
+    color: var(--text-colour);
+    font-family: var(--font-fam);
+    background-color: var(--bg-colour);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'MercLight';
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.container.receipt {
+    padding-top: 2rem;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+h1.page-title,
+h1.page-title:before {
+    color: var(--header-text-colour);
+    background-color: transparent;
+    left: 0;
+}
+
+.hero {
+    height: 10vw;
+    text-align: center;
+}
+
+/* -- Header -- */
+.headerPad{
+    padding: 0 25px;
+}
+
+header.notPdHeader {
+    background-color: var(--header-bg-colour);
+}
+
+.electraNavMenu {
+    font-size: 0.85em;
+    text-transform: uppercase;
+}
+
+.electraNavMenu a:focus {
+    outline: none;
+}
+
+.user > a {
+    color: var(--action-offset-colour);
+    font-size: 1.25em;
+    margin-left: 5px;
+}
+
+.search .user a {
+    color: var(--text-colour);
+    font-size: 0.9em;
+    margin-left: 0;
+}
+
+.user a:hover {
+    text-decoration: none;
+}
+
+.minicart-link,
+.minicart-link:hover, 
+span#dropdownCountrySelector {
+    color: var(--header-text-colour);
+}
+
+.nav-item>.nav-link{
+    text-transform: none;
+    font-size: 1rem;
+    font-family: 'HelveticaNeue';
+    color:#FCFCFC;
+}
+
+.multilevel-dropdown .dropdown-item .dropdown-link {
+    text-transform: none;
+}
+
+.nav-item .nav-link:focus, 
+.nav-item .nav-link:hover, 
+.nav-item.show .nav-link {
+    background-color: transparent;
+    color: var(--header-text-colour);
+    opacity: 0.75;
+}
+
+.main-menu {
+    background-color: transparent;
+}
+
+.user.hidden-md-down {
+    color: var(--header-text-colour);
+}
+
+.navbar-header .user {
+    margin: 0;
+}
+
+.navbar-header .navbar-toggler {
+    color: var(--header-text-colour);
+}
+
+.minicart .minicart-quantity {
+    background-color: var(--action-colour);
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+}
+
+.minicart .minicart-icon{
+    color: var(--header-text-colour);
+}
+
+/* -- Footer Styles -- */
+
+#footercontent, 
+#footercontent .back-to-top i.fa-arrow-up,
+#footercontent a {
+    background-color: var(--footer-bg-colour);
+    color: var(--footer-text-colour);
+}
+
+footer .footer-container .footer-item.collapsible-xs button{
+    font-family: var(--font-fam);
+    color: var(--footer-text-colour);
+}
+
+footer .back-to-top i.fa-circle {
+    text-shadow: none;
+}
+
+/* -- Homepage -- */
+
+.hibOuter:hover img {
+    transform: inherit!important;
+}
+
+.imgOverlay {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.766089) 5.87%, rgba(34, 34, 34, 0.0001) 96.74%, rgba(238, 238, 238, 0.0001) 115.48%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.ibtoContainer h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.ibtoContainer h2 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.ftContainer h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-colour);
+}
+
+.experience-qb_custom_layouts-1rowFullWidth .region.col-12.col-md-12.px-2 {
+    margin-bottom: 0;
+}
+
+.experience-qb_custom_layouts-3columnAdjustable img.photo-tile-image.image-fluid {
+    padding-top: 2rem;
+}
+
+/* -- Buttons and Links -- */
+
+.btn-primary, 
+.btnBrand,
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: var(--action-colour);
+    border: 1px solid var(--action-colour);
+    color: var(--action-offset-colour);
+    padding: 15px 40px;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 0;
+    outline: none;
+}
+
+.btn-primary:hover {
+    color: var(--action-offset-colour);
+    background-color: var(--action-hover-colour);
+    border-color: var(--action-hover-colour);
+}
+
+.btn-outline-primary,
+.btn-outline-primary:not(:disabled):not(.disabled):active {
+    color: var(--action-colour);
+    border-color: var(--action-colour);
+    border-radius: 0;
+    padding: 15px 40px;
+}
+
+.btn-outline-primary:hover {
+    color: var(--action-offset-colour);
+    background-color: var(--action-colour);
+    border-color: var(--action-offset-colour);
+}
+
+.btn-outline-primary.disabled, 
+.btn-outline-primary:disabled {
+    color: var(--action-colour);
+}
+
+header~#maincontent .container a:not(.btn-primary):not(.btn-outline-primary) {
+    color: var(--text-colour);
+}
+
+a.btn.btn-primary.btn-block.checkout-btn,
+button.add-to-cart.btn.btn-primary {
+    background-color: var(--action-colour);
+    border-color: var(--action-colour);
+}
+
+a,
+a.normal{
+    color: var(--link-colour);
+}
+
+.navbar-header .user .popover {
+    background-color: var(--header-bg-colour);
+}
+
+.btn-add-new, 
+.btn-show-details, 
+.edit-button {
+    color: var(--action-colour) !important;
+}
+
+.info-icon .icon {
+    background-color: var(--action-colour);
+}
+
+/* -- Chatbot Styles -- */
+
+.embeddedServiceHelpButton .helpButton .uiButton {
+    background-color: #005290;
+    font-family: "Arial", sans-serif;
+}
+
+.embeddedServiceHelpButton .helpButton .uiButton:focus {
+    outline: 1px solid #005290;
+}
+
+/* -- Filter side panel Styles -- */
+
+select {
+    background: url(../images/chevron-down.svg)
+}
+
+/* -- PLP Styles -- */
+
+.slant-down:after, 
+.slant-up:after{
+    display:none;
+}
+
+.search {
+    display: inline-block;
+}
+
+.search-banner {
+    background-image: url(../images/ExploreHeaderImg.jpg);
+    height: 160px;
+}
+
+.searchHeaderText {
+    color: white;
+    text-align: center;
+    padding-top: 60px;
+}
+
+.filterHeader img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* -- Responsive displays -- */
+.onlyMobile{
+    display: none;
+}
+
+.onlyDesktop{
+    display: block;
+}
+
+.flexDisp{
+    display: flex;
+}
+
+.vCenter {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.product-tile .tile-body .pdp-link {
+    font-family: 'MercLight';
+    text-align: center;
+}
+
+.product-tile .tile-body .price {
+    text-align: center;
+    color: #999;
+    font-family: MercBold;
+}
+
+.product-tile .tile-body .ratings {
+    text-align: center;
+}
+
+.embeddedServiceHelpButton .helpButton .uiButton{
+    background: var(--action-colour) !important;
+}
+
+@media (max-width: 991.98px){
+
+    .onlyMobile{
+        display: block;
+    }
+
+    .onlyDesktop{
+        display: none;
+    }
+
+    .description-and-detail {
+        margin: 1.5rem 0;
+    }
+
+    .description-and-detail .title {
+        font-family: var(--font-fam) !important;
+    }
+
+    .description-and-detail button.title.btn.text-left.btn-block.d-sm-none {
+        padding-left: 0;
+        font-size: 1.75rem; 
+    }
+
+    .description-and-detail .collapsible-xs .title:after {
+        font-size: 1rem;
+    }
+
+    header.pdHeader {
+        background-color: var(--header-bg-colour);
+    }
+
+    .brand {
+        width: 7rem;
+        margin-left: -4rem;
+        padding-top: 1.5rem;
+    }
+
+    .ibtoOuter .ibtoContainer {
+        top: 0 !important;
+        left: 0 !important;
+        max-width: 100% !important;
+    }
+
+    .ibtoOuter .imageBg {
+        max-width: 100%;
+    }
+
+    .ibtoContainer h1 {
+        font-size: 2rem;
+    }
+
+    .ibtoContainer h2,
+    .ftContainer h1 {
+        font-size: 1.5rem;
+    }
+
+    .ibtoContainer .btnContainer .btn {
+        margin-top: 1rem !important;
+    }
+
+    .ttContainer img {
+        max-width: 70%;
+    }
+
+    .threekit .canvas___5Y3Rh,
+    .threekit-player {
+        width: 100vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .site-search {
+        width: 10rem;
+    }
+
+    header.pdHeader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 200;
+    }
+
+    .site-search input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid var(--header-text-colour);
+        border-radius: 0;
+        font-size: 0.85em;
+    }
+
+    .site-search input::placeholder,
+    .site-search .fa-search {
+        color: var(--header-text-colour);
+    }
+
+    .navbar-header .country-selector, 
+    .navbar-header .minicart, 
+    .navbar-header .user {
+        margin: 0em 0 0 .5em;
+    }
+
+    .navbar-header .search {
+        margin: 0.5em 0 0 .5em;
+    }
+
+    .dropdown-country-selector {
+        left: -12rem;
+    }
+}
+
+/* appt booker */
+.asp-table {
+    position: relative;
+    border-width: 4px;
+    border-radius: 8px;
+    border-color: #F5F5F5;
+    border-style: solid;
+    overflow: hidden;
+}
+
+.asp-col.asp-col-header {
+    width: 125px;
+}
+
+.asp-table .asp-col {
+    width: 176px;
+    float: left;
+}
+
+.asp-table .asp-col .asp-row {
+    height: 53px;
+    width: 100%;
+    display: table;
+}
+.asp-row.asp-row-header {
+    height: 49px;
+    box-sizing: content-box;
+}
+.asp-row {
+    height: 53px;
+    width: 100%;
+    display: table;
+}
+.asp-row-header {
+    height: 49px;
+    box-sizing: content-box;
+}
+
+.background-dark-blue, 
+.hover-background-dark-blue:hover {
+    background-color: var(--action-colour);
+}
+
+.asp-table .asp-col .asp-row .asp-cell {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.asp-cell {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    height: 100%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+.font-size-8 {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.asp-scroll {
+    position: absolute;
+    overflow: visible;
+    top: 0;
+    left: 125px;
+    right: 0;
+    bottom: 0;
+}
+.__24e09 {
+    position: absolute;
+    overflow: visible;
+    top: 0;
+    left: 125px;
+    right: 0;
+    bottom: 0;
+}
+
+.asp-scroll-btn.asp-scroll-btn-next {
+    right: 0;
+    padding: 0 8px;
+}
+.asp-scroll-btn.asp-scroll-btn-next {
+    right: 0;
+    padding: 0 8px;
+}
+.asp-scroll-btn {
+    position: absolute;
+    border: none;
+    padding: 0;
+    height: 52px;
+    min-width: 36px;
+    outline: 0;
+    z-index: 2;
+    background: var(--action-colour);
+}
+.more-dates {
+    height: 53px;
+}
+.asp-scroll-btn {
+    position: absolute;
+    border: none;
+    padding: 0;
+    height: 49px;
+    min-width: 36px;
+    outline: 0;
+    z-index: 2;
+    background: var(--action-colour);
+}
+.m0 {
+    margin: 0;
+}
+.text-center {
+    text-align: center;
+}
+.asp-scroll-btn span:not(.fa) {
+    line-height: 24px;
+    vertical-align: text-bottom;
+}
+.asp-scroll-btn span:not(.fa) {
+    font-size: 24px;
+    vertical-align: text-bottom;
+}
+.mr2 {
+    margin-right: 10px;
+}
+.hover-white:hover, .white {
+    color: #FFF;
+}
+
+.asp-scroll-btn .fa {
+    font-size: 24px;
+}
+.asp-scroll-btn .fa {
+    font-size: 24px;
+}
+
+.asp-scroll-area-wrapper {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+.asp-scroll-area-wrapper {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.asp-scroll-area {
+    transition: all .8s ease-in-out;
+}
+
+.asp-table .asp-col {
+    width: 176px;
+    float: left;
+}
+.asp-col {
+    width: 176px;
+    float: left;
+}
+.font-size-8 {
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.asp-table .asp-col .asp-row {
+    height: 53px;
+    width: 100%;
+    display: table;
+}
+.asp-row.asp-row-header {
+    height: 49px;
+    box-sizing: content-box;
+}
+
+.asp-row {
+    height: 53px;
+    width: 100%;
+    display: table;
+}
+.asp-row-header {
+    height: 49px;
+    box-sizing: content-box;
+}
+
+.bgcss .border-light-grey {
+    border-color: #EEE;
+}
+.bgcss .border-right {
+    border-right-style: solid;
+    border-right-width: 1px;
+}
+
+.asp-table .asp-col .asp-row.border-right, 
+.asp-row.asp-row-header .asp-cell.border-right {
+    border-right-width: 4px;
+}
+
+.asp-btn {
+    padding: 0 14px;
+    line-height: 26px;
+    color: var(--action-colour);
+    border-color: var(--action-colour);
+    font-weight: 600;
+}
+.asp-appointment-slot-selected, 
+.asp-btn {
+    font-size: 16px;
+    display: block;
+    border-radius: 4px;
+    height: 43px;
+    width: 100%;
+    background-color:white;
+}
+
+.background-light-grey, 
+.hover-background-light-grey:hover {
+    background-color: #EEE;
+}
+
+.asp-fade-left {
+    background-image: linear-gradient(to right,#fff,rgba(255,255,255,0));
+    top: 53px;
+    bottom: 0;
+    width: 40px;
+    position: absolute;
+    left: 0;
+}
+
+.asp-fade-right {
+    background-image: linear-gradient(to right,rgba(255,255,255,0),#fff);
+    top: 53px;
+    bottom: 0;
+    width: 40px;
+    position: absolute;
+    right: 0;
+}
+.asp-col.asp-col-header {
+    width: 125px;
+}
+
+.asp-btn:hover,
+.asp-btn:active {
+    background: var(--action-colour);
+    border-color: var(--action-colour);
+    color: #FFF;
+}
+
+.selectedSlot{
+    background: var(--action-colour);
+    border-color: var(--action-colour);
+    color: #FFF;
+}
+   
+.asp-fade-left {
+    background-image: linear-gradient(to right,#fff,rgba(255,255,255,0));
+    top: 53px;
+    bottom: 0;
+    width: 40px;
+    position: absolute;
+    left: 124px;
+}
+
+/*end of app css*/

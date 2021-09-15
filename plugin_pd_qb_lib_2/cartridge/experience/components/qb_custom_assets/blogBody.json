@@ -1,0 +1,33 @@
+{
+    "name": "Blog Body",
+    "description": "Component for the body information of a blog post",
+    "group": "qb_custom_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "text__details",
+            "name": "Text Details",
+            "attribute_definitions": [
+                {
+                    "id": "post_body",
+                    "name": "Post Body",
+                    "type": "markup",
+                    "required": true
+                },
+                {
+                    "id": "text_align",
+                    "name": "Text Alignment",
+                    "description": "Defaults to left",
+                    "type": "enum",
+                    "values": [
+                        "Left",
+                        "Center",
+                        "Right"
+                    ],
+                    "default_value": "Left",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

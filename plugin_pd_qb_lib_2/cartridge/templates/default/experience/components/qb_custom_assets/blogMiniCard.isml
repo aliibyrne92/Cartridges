@@ -1,0 +1,25 @@
+<isscript>
+    var assets = require('*/cartridge/scripts/assets.js');
+    assets.addCss('/css/blogMiniCard.css');
+</isscript>
+
+<div class="bmcContainer">
+    <a class="blogLink" href="${pdict.linkURL}">
+        <div class="imageContainer">
+            <source srcset="${pdict.image.src.desktop}" media="(min-width: 768px)"/>
+            <img style="height:${pdict.imageHeight};width:100%; --focal-point-x:${pdict.image.focalPointX}; --focal-point-y:${pdict.image.focalPointY};" src="${pdict.image.src.desktop}" <isif condition="${pdict.image.alt}">alt="${pdict.image.alt}" title="${pdict.image.alt}"</isif> />
+        </div>
+
+        <div class="richText" style="color:${pdict.textColour};text-align:${pdict.textAlign}">
+            <${pdict.textHeaderType} class="blogHeader">
+                ${pdict.textHeader}
+            </${pdict.textHeaderType}>
+            <div class="bmcTextBody">
+                <div class="bmcHashtag">
+                    <isprint value="${pdict.postHashtag}" encoding="off"/>
+                </div>
+                <isprint value="${pdict.textBody}" encoding="off"/>
+            </div>
+        </div>
+    </a>
+</div>

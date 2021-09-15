@@ -1,0 +1,96 @@
+{
+    "name": "Formatted Text",
+    "description": "Component to show Formatted Text",
+    "group": "qb_custom_assets",
+    "attribute_definition_groups": [
+      {
+        "id": "text__details",
+        "name": "Text Details",
+        "attribute_definitions": [
+            {
+                "id": "text_header",
+                "name": "Text Header",
+                "type": "text",
+                "required": false
+            },
+            {
+                "id": "text_header_type",
+                "name": "Text Header Type- h1, h2, h3",
+                "description": "Defaults to h1",
+                "type": "string",
+                "required": false
+            },
+            {
+                "id": "text_header_font",
+                "name": "Text Header Font",
+                "description": "Defaults to var(--font-fam)",
+                "default_value": "var(--font-fam)",
+                "type": "string",
+                "required": false
+            },
+            {
+                "id": "text_body",
+                "name": "Text Body",
+                "type": "markup",
+                "required": false
+            },
+            {
+                "id": "text_body_font",
+                "name": "Text Body Font",
+                "description": "Defaults to var(--font-fam)",
+                "default_value": "var(--font-fam)",
+                "type": "string",
+                "required": false
+            },
+            {
+                "id": "text_colour",
+                "name": "Text Colour",
+                "description": "Defaults to body default colour",
+                "type": "custom",
+                "required": false,
+                "editor_definition": {
+                    "type": "themer.colorpicker"
+                }
+            },
+            {
+                "id": "text_font_weight",
+                "name": "Body Text Font Weight",
+                "type": "string",
+                "required": false
+            },
+            {
+                "id": "text_size",
+                "name": "Body Text Size",
+                "type": "string",
+                "required": false
+            },
+            {
+                "id": "text_align",
+                "name": "Text Alignment",
+                "description": "Defaults to center",
+                "type": "enum",
+                "values": [
+                    "Left",
+                    "Center",
+                    "Right"
+                ],
+                "default_value": "Center",
+                "required": false
+            },
+            {
+                "id": "container_pad",
+                "name": "Container Padding",
+                "type": "string",
+                "required": false
+            },
+            {
+                "id": "line_height",
+                "name": "Line Height",
+                "type": "string",
+                "required": false
+            }
+        ]
+      }
+    ],
+    "region_definitions": []
+}

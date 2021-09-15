@@ -1,0 +1,18 @@
+<isif condition="${slotcontent}">
+    <div style="padding-top: 3rem;"></div>
+    <hr />
+
+    <div class="recommendations">
+        <div class="headerRow flexDisp" style="justify-content: space-between;">
+            <h2 class="col-sm-12 col-md-4 col-lg-3 title">You might like</h2>
+            <img style="width: 2.5rem;" class="hidden-md-down" src="${URLUtils.staticURL('/images/einstein.svg')}" alt="Einstein" />
+        </div>
+        
+        <div class="row">
+            <div class="col-sm-12 col-md-8 col-lg-9 value content legoProducts legoRecs">
+                <isset name="end" value="${2}" scope="page" />
+                <isinclude template="components/products" />
+            </div>
+        </div>
+    </div>
+</isif>

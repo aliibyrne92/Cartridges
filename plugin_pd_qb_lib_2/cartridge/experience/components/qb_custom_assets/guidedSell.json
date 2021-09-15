@@ -1,0 +1,332 @@
+{
+    "name": "Guided Sell",
+    "description": "Component for showing a guided sell",
+    "group": "qb_custom_assets",
+    "attribute_definition_groups": [
+        {
+            "id": "flow__details",
+            "name": "Flow Details",
+            "attribute_definitions": [
+                {
+                    "id": "title",
+                    "name": "Guided Sell Title",
+                    "type": "string",
+                    "required": true
+                },
+                {
+                    "id": "submit_url",
+                    "name": "URL Endpoint for Flow",
+                    "type": "url",
+                    "required": false
+                }
+            ] 
+        },
+        {
+            "id": "flow__styles",
+            "name": "Styling Options",
+            "attribute_definitions": [
+                {
+                    "id": "bg_colour",
+                    "name": "Background colour",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "bg_offset",
+                    "name": "Progress colour (contrasts background)",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "btn_colour",
+                    "name": "Button colour",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "btn_offset_colour",
+                    "name": "Button offset colour (contrasting)",
+                    "type": "custom",
+                    "required": false,
+                    "editor_definition": {
+                        "type": "themer.colorpicker"
+                    }
+                },
+                {
+                    "id": "text_transform",
+                    "name": "Text Transform (Uppercase, lowercase, none)",
+                    "type": "string",
+                    "required": false
+                }
+            ] 
+        },
+        {
+            "id": "q1__details",
+            "name": "Question 1 Details",
+            "attribute_definitions": [
+                {
+                    "id": "q1",
+                    "name": "Question 1",
+                    "description": "Defaults to 'What are you looking for?'",
+                    "default_value": "What are you looking for?",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "q1a1",
+                    "name": "Answer 1",
+                    "description": "Defaults to 'Tops'",
+                    "default_value": "Tops",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "q1a1_image",
+                    "name": "Answer 1 Image",
+                    "type": "image",
+                    "required": false
+                },
+                {
+                    "id": "q1a2",
+                    "name": "Answer 2",
+                    "description": "Defaults to 'Skirts'",
+                    "default_value": "Skirts",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "q1a2_image",
+                    "name": "Answer 2 Image",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "q1a3",
+                    "name": "Answer 3",
+                    "description": "Defaults to 'Shoes'",
+                    "default_value": "Shoes",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "q1a3_image",
+                    "name": "Answer 3 Image",
+                    "type": "image",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "id": "q2__details",
+            "name": "Question 2 Details",
+            "attribute_definitions": [
+                {
+                    "id": "q2",
+                    "name": "Question 2",
+                    "description": "Defaults to 'What type of look do you prefer?'",
+                    "default_value": "What type of look do you prefer?",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "q2a1",
+                    "name": "Answer 1",
+                    "description": "Defaults to 'Elegant'",
+                    "default_value": "Elegant",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "q2a1_image",
+                    "name": "Answer 1 Image",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "q2a2",
+                    "name": "Answer 2",
+                    "description": "Defaults to 'Everyday'",
+                    "default_value": "Everyday",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "q2a2_image",
+                    "name": "Answer 2 Image",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "q2a3",
+                    "name": "Answer 3",
+                    "description": "Defaults to 'Business'",
+                    "default_value": "Business",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "q2a3_image",
+                    "name": "Answer 3 Image",
+                    "type": "image",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "id": "q3__details",
+            "name": "Question 3 Details",
+            "attribute_definitions": [
+                {
+                    "id": "q3",
+                    "name": "Question 3",
+                    "description": "Defaults to 'What is your favourite Autumn colour?'",
+                    "default_value": "What is your favourite Autumn colour?",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "q3a1",
+                    "name": "Answer 1",
+                    "description": "Defaults to 'Yellow'",
+                    "default_value": "Yellow",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "q3a1_image",
+                    "name": "Answer 1 Image",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "q3a2",
+                    "name": "Answer 2",
+                    "description": "Defaults to 'Red'",
+                    "default_value": "Red",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "q3a2_image",
+                    "name": "Answer 2 Image",
+                    "type": "image",
+                    "required": true
+                },
+                {
+                    "id": "q3a3",
+                    "name": "Answer 3",
+                    "description": "Defaults to 'Orange'",
+                    "default_value": "Orange",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "q3a3_image",
+                    "name": "Answer 3 Image",
+                    "type": "image",
+                    "required": true
+                }
+            ]
+        },
+        {
+            "id": "form__details",
+            "name": "Form Details",
+            "attribute_definitions": [
+                {
+                    "id": "show_form_tab",
+                    "name": "Show Form Tab",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "form_label",
+                    "name": "Form Tab Label",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "show_radio_btn",
+                    "name": "Show Radio Button",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "radio_btn_label",
+                    "name": "Radio Button Label",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "radio_btn_opt1",
+                    "name": "Radio Button Option 1",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "radio_btn_opt2",
+                    "name": "Radio Button Option 2",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "radio_btn_opt3",
+                    "name": "Radio Button Option 3",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "show_text_input",
+                    "name": "Show Text Input",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "text_input_label",
+                    "name": "Text Input Label",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "show_option_list",
+                    "name": "Show Dropdown List",
+                    "type": "boolean",
+                    "required": false
+                },
+                {
+                    "id": "option_list_label",
+                    "name": "Dropdown List Label",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "option1",
+                    "name": "Dropdown Option 1",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "option2",
+                    "name": "Dropdown Option 2",
+                    "type": "string",
+                    "required": false
+                },
+                {
+                    "id": "option3",
+                    "name": "Dropdown Option 3",
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        }
+    ],
+    "region_definitions": []
+}

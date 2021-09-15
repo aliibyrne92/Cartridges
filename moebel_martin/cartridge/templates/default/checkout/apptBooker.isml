@@ -1,0 +1,385 @@
+<script>
+    function getDate() {
+        var oldSelected = document.getElementsByClassName('selectedSlot');
+        if(oldSelected.length > 0){
+            var oldSelectedSpan = oldSelected[0].getElementsByClassName('slotSelected');
+            oldSelectedSpan[0].setAttribute("style","display:none");
+            oldSelected[0].classList.remove('selectedSlot');
+        }
+
+        this.classList.add('selectedSlot');
+        var selectedSpan = this.getElementsByClassName('slotSelected');
+        selectedSpan[0].setAttribute("style","display:inline");
+    }
+
+    function scrollRight() {
+        var scrollArea = document.getElementsByClassName('asp-scroll-area');
+        scrollArea[0].setAttribute("style", "width: 1056px;-ms-transform: translate3d(-244px,0,0);-o-transform: translate3d(-244px,0,0);-moz-transform: translate3d(-244px,0,0);-webkit-transform: translate3d(-244px,0,0);transform: translate3d(-244px,0,0);");
+        
+        var scrollRightButton = document.getElementsByClassName('scroll-right');
+        scrollRightButton[0].setAttribute("style","display:none");
+
+        var scrollLeftButton = document.getElementsByClassName('scroll-left');
+        scrollLeftButton[0].setAttribute("style","display:inline");
+
+        var rightFade = document.getElementsByClassName('asp-fade-right');
+        rightFade[0].setAttribute("style","display:none");
+
+        var leftFade = document.getElementsByClassName('asp-fade-left');
+        leftFade[0].setAttribute("style","display:inline");
+    }
+
+    function scrollLeft1(){
+        var scrollArea = document.getElementsByClassName('asp-scroll-area');
+        scrollArea[0].setAttribute("style", "width: 1056px;-ms-transform: translate3d(0px,0,0);-o-transform: translate3d(0px,0,0);-moz-transform: translate3d(0px,0,0);-webkit-transform: translate3d(0px,0,0);transform: translate3d(0px,0,0);");
+        
+        var scrollRightButton = document.getElementsByClassName('scroll-right');
+        scrollRightButton[0].setAttribute("style","display:inline");
+
+        var scrollLeftButton = document.getElementsByClassName('scroll-left');
+        scrollLeftButton[0].setAttribute("style","display:none");
+
+        var rightFade = document.getElementsByClassName('asp-fade-right');
+        rightFade[0].setAttribute("style","display:inline");
+
+        var leftFade = document.getElementsByClassName('asp-fade-left');
+        leftFade[0].setAttribute("style","display:none");
+    }
+      
+</script>
+
+<div style="margin-bottom:2rem; background-color: white;border: 1px solid rgba(0,0,0,.125);border-radius: .1875rem;padding: 1.25rem;">
+    <div >
+        <h2 style="font-size: 1.5rem;">Choose a time slot</h2>
+        <span class="font-size-5 block sm-pb4 xs-pb2">
+        </span>
+    </div>
+    <div class="asp-table">
+
+        <div class="asp-col asp-col-header background-light-grey font-size-9 border-right">
+        <div class="asp-row asp-row-header background-dark-blue white">
+        </div>
+            <div class="asp-row ">
+            <div class="asp-cell font-size-8">
+                <div class="row-label ">
+                8am - 11am
+                </div>
+            </div>
+            </div>
+            <div class="asp-row ">
+            <div class="asp-cell font-size-8">
+                <div class="row-label ">
+                11am - 2pm
+                </div>
+            </div>
+            </div>
+            <div class="asp-row ">
+            <div class="asp-cell font-size-8">
+                <div class="row-label ">
+                2pm - 5pm
+                </div>
+            </div>
+            </div>
+            <div class="asp-row ">
+            <div class="asp-cell font-size-8">
+                <div class="row-label ">
+                5pm - 8pm
+                </div>
+            </div>
+            </div>
+        </div>
+
+    <div id="ember1268" class="asp-scroll __24e09 scroll-header-component ember-view" style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">
+    
+        <button onClick="scrollLeft1()" class="asp-scroll-btn asp-scroll-btn-prev m0 text-center scroll-left" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;display:none;" data-ember-action="" data-ember-action-1354="1354">
+            <span class="fa fa-chevron-circle-left white" aria-hidden="true"></span>
+        </button>
+        
+        <button onClick="scrollRight()" class="asp-scroll-btn asp-scroll-btn-next m0 text-center more-dates scroll-right" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" data-ember-action="" data-ember-action-1269="1269">
+            <span class="fa fa-chevron-circle-right white" aria-hidden="true"></span>
+        </button>
+    <div class="asp-scroll-area-wrapper">
+    <div style="
+        width: 1056px;
+        -ms-transform: translate3d(0px,0,0);
+        -o-transform: translate3d(0px,0,0);
+        -moz-transform: translate3d(0px,0,0);
+        -webkit-transform: translate3d(0px,0,0);
+        transform: translate3d(0px,0,0);
+        " class="asp-scroll-area">
+        
+        <div class="asp-col font-size-8">
+
+            <div class="asp-row asp-row-header background-dark-blue white">
+            <div class="asp-cell border-right border-white">
+                Sun 1st Aug
+            </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1276" class="slot-picker-button __18a0e slot-picker-button-component ember-view">
+                        <button onClick="getDate.call(this)" id="ember1277" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1277">     8am - 1pm
+                            <span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1279" class="slot-picker-button __18a0e slot-picker-button-component ember-view">
+                        <button onClick="getDate.call(this)" id="ember1280" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1280">      11am - 2pm
+                            <span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div class="no-slot-label">
+                    Fully booked
+                    </div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1282" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1283" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1283">      5pm - 8pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="asp-col font-size-8">
+
+            <div class="asp-row asp-row-header background-dark-blue white">
+            <div class="asp-cell border-right border-white">
+                Mon 2nd Aug
+            </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div class="no-slot-label">
+                    Fully booked
+                    </div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1286" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1287" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1287">     11am - 2pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div class="no-slot-label">
+                    Fully booked
+                    </div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1289" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1290" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1290">     5pm - 8pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        
+        <div class="asp-col font-size-8">
+
+            <div class="asp-row asp-row-header background-dark-blue white">
+            <div class="asp-cell border-right border-white">
+                Tue 3rd Aug
+            </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1293" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1294" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1294">     8am - 1pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1296" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1297" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1297">     11am - 2pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1299" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1300" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1300">     2pm - 5pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1302" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1303" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1303">      5pm - 8pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        
+        <div class="asp-col font-size-8">
+
+            <div class="asp-row asp-row-header background-dark-blue white">
+            <div class="asp-cell border-right border-white">
+                Wed 4th Aug
+            </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1306" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1307" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1307">     8am - 1pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1309" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1310" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1310">     11am - 2pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1312" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1313" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1313">     2pm - 5pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1315" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1316" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1316">     5pm - 8pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        
+        <div class="asp-col font-size-8">
+
+            <div class="asp-row asp-row-header background-dark-blue white">
+            <div class="asp-cell border-right border-white">
+                Thu 5th Aug
+            </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1319" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1320" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1320">     8am - 1pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1322" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1323" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1323">     11am - 2pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1325" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1326" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1326">      2pm - 5pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1328" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1329" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1329">      5pm - 8pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        
+        <div class="asp-col font-size-8">
+
+            <div class="asp-row asp-row-header background-dark-blue white">
+            <div class="asp-cell border-right border-white">
+                Fri 6th Aug
+            </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1332" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1333" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1333">      8am - 1pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1335" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1336" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1336">      11am - 2pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1338" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1339" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1339">      2pm - 5pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+            <div class="asp-row border-right border-light-grey ">
+                <div class="asp-cell">
+                    <div id="ember1341" class="slot-picker-button __18a0e slot-picker-button-component ember-view"><button onClick="getDate.call(this)" id="ember1342" style="touch-action: manipulation; -ms-touch-action: manipulation; cursor: pointer;" class="asp-btn bg-button btn bg-button-component btn-secondary ember-view" type="button" data-di-id="#ember1342">      5pm - 8pm
+<span class="fa fa-check slotSelected" aria-hidden="true" style="display:none"></span>
+    </button></div>
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+        <div class="asp-fade-right"></div>
+    </div>
+    </div>  
+        <div class="asp-fade-left" style="display:none;"></div>
+    </div>
+</div>

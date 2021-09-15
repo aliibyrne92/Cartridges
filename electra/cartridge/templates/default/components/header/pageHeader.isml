@@ -1,0 +1,127 @@
+<header class="notPdHeader">
+    <isinclude template="/components/header/skipNav" />
+
+    <nav role="navigation" class="onlyDesktop">
+        <div class="header headerPad">
+            <nav class="navbar navbar-header">
+                <a class="navbar-brand" href="${URLUtils.url('Home-Show')}" title="${ Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg('global.home', 'common', null)) }">
+                    <img class="hidden-md-down" src="${URLUtils.staticURL('/images/autoforce-white2.png')}" alt="${Resource.msg('global.storename', 'common', null)}" />
+                </a>
+                <div class="navbar-nav electraNavMenu">
+                    <div class="main-menu navbar-toggleable-sm menu-toggleable-left multilevel-dropdown d-none d-md-block" id="sg-navbar-collapse">
+                        <div class="container">
+                            <div class="row">
+                                <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu')}"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="search hidden-xs-down">
+                        <isinclude template="components/header/search" />
+                    </div>
+                </div>
+                <div class="flexDisp">
+                    <div class="hidden-md-down">
+                        <isinclude url="${URLUtils.url('Page-Locale')}" />
+                        <isinclude url="${URLUtils.url('Account-Header')}" />
+                    </div>
+                    <div class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
+                        <isinclude url="${URLUtils.url('Cart-MiniCart')}" />
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    
+    <nav role="navigation" class="onlyMobile">
+        <div class="header container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="navbar-header brand">
+                        <a class="logo-home" href="${URLUtils.url('Home-Show')}" title="${ Resource.msgf('global.homepage.tooltip', 'common', null, Resource.msg('global.storename', 'common', null), Resource.msg('global.home', 'common', null)) }">
+                            <img class="d-lg-none" src="${URLUtils.staticURL('/images/logo.svg')}" alt="${Resource.msg('global.storename', 'common', null)}" />
+                        </a>
+                    </div>
+                    <div class="navbar-header">
+                        <div class="pull-left">
+                            <div class="hidden-md-down">
+                                <isinclude url="${URLUtils.url('Account-Header')}" />
+                                <isinclude url="${URLUtils.url('Page-Locale')}" />
+                            </div>
+                            <button class="navbar-toggler d-md-none" type="button" aria-controls="sg-navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                                &#9776; <span class="hidden-xs-down">Menu</span>
+                            </button>
+                        </div>
+                        <div class="pull-right">
+                            <div class="search hidden-xs-down">
+                                <isinclude template="components/header/search" />
+                            </div>
+                            <div class="minicart" data-action-url="${URLUtils.url('Cart-MiniCartShow')}">
+                                <isinclude url="${URLUtils.url('Cart-MiniCart')}" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-menu navbar-toggleable-sm menu-toggleable-left multilevel-dropdown d-none d-md-block" id="sg-navbar-collapse">
+            <div class="container">
+                <div class="row">
+                    <isinclude url="${URLUtils.url('Page-IncludeHeaderMenu')}"/>
+                </div>
+            </div>
+        </div>
+        <div class="search-mobile d-sm-none">
+            <isinclude template="components/header/search" />
+        </div>
+    </nav>
+</header>
+
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+    var initESW = function(gslbBaseURL) {
+        embedded_svc.settings.displayHelpButton = true; //Or false
+        embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+        //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
+        //embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
+        //embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
+        //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
+        // Settings for Chat
+        //embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+            // Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
+            // Returns a valid button ID.
+        //};
+        //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
+        //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
+        //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
+        embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+        embedded_svc.settings.entryFeature = 'LiveAgent';
+        embedded_svc.init(
+            'https://electrademo.my.salesforce.com',
+            'https://sdodemo-main-166ce2cf6b6-172-177f89337f2.force.com/ntoemployee',
+            gslbBaseURL,
+            '00D5Y000001cd1H',
+            'OMS_Bot',
+            {
+                baseLiveAgentContentURL: 'https://c.la3-c2-ia4.salesforceliveagent.com/content',
+                deploymentId: '5725Y0000011Dev',
+                buttonId: '5735Y0000011E4J',
+                baseLiveAgentURL: 'https://d.la3-c2-ia4.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I3t000000gWSSEA2_17402c2de81',
+                isOfflineSupportEnabled: false
+            }
+        );
+    };
+    if (!window.embedded_svc) {
+        var s = document.createElement('script');
+        s.setAttribute('src', 'https://electrademo.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+        s.onload = function() {
+            initESW(null);
+        };
+        document.body.appendChild(s);
+    } else {
+        initESW('https://service.force.com');
+    }
+</script>
+

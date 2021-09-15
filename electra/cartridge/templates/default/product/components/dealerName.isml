@@ -1,0 +1,18 @@
+
+    <iscomment>Marketplacer Custom Code: Start</iscomment>
+    <isscript>
+		var Site = require('dw/system/Site');
+		var sellerPagesEnabled = Site.current.preferences.custom.sellerPagesEnabled;
+	</isscript>
+    <isif condition="${product.marketplacer && product.marketplacer.seller}">
+        <div class="col-12">
+            <span>${Resource.msg('label.product.seller', 'marketplacer', null)} 
+	            <isif condition="${sellerPagesEnabled}">
+	            	<a href="${dw.web.URLUtils.https('Search-Show', 'q', product.marketplacer.seller.businessName)}">${product.marketplacer.seller.businessName}</a>
+	            <iselse/>
+	            	${product.marketplacer.seller.businessName}
+	            </isif>	
+            </span>
+        </div>
+    </isif>
+    <iscomment>Marketplacer Custom Code: End</iscomment>

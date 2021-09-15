@@ -1,0 +1,22 @@
+<isif condition="${pdict.name === null}">
+    <div class="user hidden-md-down">
+        <a href="${URLUtils.https('Wishlist-Show')}">
+            <img src="${URLUtils.staticURL('/images/heart.svg')}" alt="Wishlist" />
+        </a>
+        <a href="${URLUtils.https('Login-Show')}">
+            <img src="${URLUtils.staticURL('/images/Avatar.svg')}" alt="My Account" />
+        </a>
+    </div>
+    <iselse/>
+    <div class="user hidden-md-down" tabindex="0">
+        <img src="${URLUtils.staticURL('/images/Avatar.svg')}" alt="My Account" />
+        <div class="popover popover-bottom">
+            <a href="${URLUtils.https('Account-Show')}">${Resource.msg('link.header.myaccount', 'account', null)}</a>
+            <a href="${URLUtils.url('Order-History')}">${Resource.msg('label.myorders', 'account', null)}</a>
+            <a href="${URLUtils.https('Wishlist-Show')}" class="test-wishlist-link">
+                <img src="${URLUtils.staticURL('/images/heart.svg')}" alt="Wishlist" />
+            </a>
+            <a href="${URLUtils.url('Login-Logout')}">${Resource.msg('link.header.logout', 'account', null)}</a>
+        </div>
+    </div>
+</isif>

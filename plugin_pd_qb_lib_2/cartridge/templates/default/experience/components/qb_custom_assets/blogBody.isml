@@ -1,0 +1,13 @@
+<style>
+    @media (max-width: 991.98px){
+        .experience-qb_custom_assets-blogBody img{
+            width: 100%;
+        }
+    }
+</style>
+
+<div class="container bbContainer">
+    <div class="container " style="text-align:${pdict.textAlign}">
+        <isprint value="${pdict.postBody}" encoding="off"/>
+    </div>
+</div>

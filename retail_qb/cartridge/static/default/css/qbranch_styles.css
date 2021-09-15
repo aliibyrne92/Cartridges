@@ -1,0 +1,277 @@
+/*
+Commented out as it causes errors if font files don't exist
+
+@font-face {
+    font-family:myFont;
+    src: url('../fonts/myFont.woff') format('woff');
+}
+
+@font-face {
+    font-family:myFont;
+    src: url('../fonts/myFontBold.woff') format('woff');
+    font-weight:700;
+}*/
+
+/** ----- EDIT COLOUR AND FONT VALUES HERE ----- **/
+:root{
+    --action-colour: #5A5A5A;
+    --action-hover-colour: black;
+    --action-offset-colour: white;
+    --link-colour: colour;
+    --text-colour: colour;
+    --bg-colour: colour;
+    --font-fam: 'Helvetica Neue';
+    --secondary-colour: colour;
+    --header-bg-colour: colour;
+    --header-text-colour: colour;
+    --menu-bg-colour: colour;
+    --menu-text-colour: colour;
+    --footer-bg-colour: white;
+    --footer-text-colour: black;
+}
+
+/* -- Main body style -- */
+body{
+    color: var(--text-colour);
+    font-family: var(--font-fam);
+    background-color: var(--bg-colour);
+}
+
+.page {
+    background-color: var(--bg-colour);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-fam);
+}
+
+h1.page-title,
+h1.page-title:before {
+    color: var(--text-colour);
+    background-color: transparent;
+}
+
+.slant-down:after, 
+.slant-up:after{
+    display:none;
+}
+
+/* -- Header -- */
+.header-banner {
+    background-color: var(--secondary-colour);
+    color: var(--text-colour);
+}
+
+.header-banner .close-button .close {
+    color: var(--text-colour);
+    background-color: var(--secondary-colour);
+}
+
+nav{
+    background-color: var(--header-bg-colour);
+}
+
+.main-menu{
+    background-color: var(--menu-bg-colour);
+}
+
+.nav-item>.nav-link {
+    color: var(--menu-text-colour);
+}
+
+.minicart .minicart-quantity {
+    background-color: var(--action-colour);
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+}
+
+.minicart .minicart-icon{
+    color: var(--header-text-colour);
+}
+
+.user-message.btn.dropdown-toggle {
+    color: var(--header-text-colour);
+}
+
+/* for shopping cart icon instead of shopping bag */
+/*.fa-shopping-bag:before {
+    content: "\F07A";
+}*/
+
+/* -- Footer --*/
+footer,
+footer .back-to-top i.fa-arrow-up,
+footer a {
+    background-color: var(--footer-bg-colour);
+    color: var(--footer-text-colour);
+}
+
+footer .footer-container .footer-item.collapsible-xs button{
+    font-family: var(--font-fam);
+    color: var(--footer-text-colour);
+}
+
+.home-email-signup {
+    background-color: var(--footer-bg-colour) !important;
+}
+
+.home-email-signup .email-description {
+    color: var(--footer-text-colour) !important;
+}
+
+footer .back-to-top i.fa-circle {
+    text-shadow: none;
+}
+
+/* -- Buttons and Links -- */
+
+.btn-primary,
+.btn-primary:not(:disabled):not(.disabled):active {
+    color: var(--action-offset-colour);
+    background-color: var(--action-colour);
+    border-color: var(--action-colour);
+}
+
+.btn-primary:hover {
+    color: var(--action-offset-colour);
+    background-color: var(--action-hover-colour);
+    border-color: var(--action-hover-colour);
+}
+
+.btn-outline-primary,
+.btn-outline-primary:not(:disabled):not(.disabled):active {
+    color: var(--action-colour);
+    border-color: var(--action-colour);
+    background-color: #fff;
+}
+
+.btn-outline-primary:hover {
+    color: var(--action-hover-colour);
+    border-color: var(--action-hover-colour);
+    background-color: #fff;
+}
+
+.btn-outline-primary.disabled, 
+.btn-outline-primary:disabled {
+    color: var(--action-colour);
+}
+
+a.btn.btn-primary.btn-block.checkout-btn,
+button.add-to-cart.btn.btn-primary {
+    background-color: var(--action-colour);
+    border-color: var(--action-colour);
+}
+
+a{
+    color: var(--link-colour);
+}
+
+a.normal{
+    color: var(--link-colour);
+}
+
+.user.hidden-md-down,
+.user.hidden-md-down a,
+span#dropdownCountrySelector {
+    color: var(--header-text-colour);
+}
+
+.navbar-header .user .popover {
+    background-color: var(--header-bg-colour);
+}
+
+.dropdown-item.active, .dropdown-item:active {
+    color: var(--text-colour);
+    background-color: var(--action-colour);
+}
+
+.refinements ul li button{
+    color: var(--text-colour);
+}
+
+button.fa.fa-search {
+    color: var(--text-colour);
+}
+
+header~#maincontent .container a:not(.btn-primary):not(.btn-outline-primary){
+    color: var(--text-colour);
+}
+
+.btn-add-new, 
+.btn-show-details, 
+.edit-button {
+    color: var(--action-colour) !important;
+}
+
+.info-icon .icon {
+    background-color: var(--action-colour);
+}
+
+.nav-tabs .nav-link.active {
+    border-bottom: .188em solid var(--action-colour);
+}
+
+/* -- Responsive displays -- */
+.onlyMobile{
+    display: none;
+}
+
+.onlyDesktop{
+    display: block;
+}
+
+.flexDisp{
+    display: flex;
+}
+
+.vCenter {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.navbar.bg-inverse .navbar-nav .nav-link {
+    text-transform: uppercase;
+}
+
+/* -- Override storePage.css on PD pages -- */
+@media (min-width: 769px) {
+    html {
+        font-size:1rem
+    }
+}
+
+/* -- to realign logo -- */
+@media (min-width: 1200px){
+    .brand{
+        margin-left: -9rem;
+    padding: 0rem 0 2rem 0;
+    width: 20rem;
+    }
+}
+
+@media (max-width: 991.98px){
+
+    .onlyMobile{
+        display: block;
+    }
+
+    .onlyDesktop{
+        display: none;
+    }
+
+    .description-and-detail {
+        margin: 1.5rem 0;
+    }
+
+    .description-and-detail .title {
+        font-family: var(--font-fam) !important;
+    }
+
+    .description-and-detail button.title.btn.text-left.btn-block.d-sm-none {
+        padding-left: 0;
+        font-size: 1.75rem; 
+    }
+
+    .description-and-detail .collapsible-xs .title:after {
+        font-size: 1rem;
+    }
+}

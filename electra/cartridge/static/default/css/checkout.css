@@ -1,0 +1,82 @@
+.container *:not(.fa){
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1.page-title{
+    background-color: transparent;
+    margin: 0;
+    display: block;
+    padding: 1.9em 10px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+h1.page-title:before{
+    display: none;
+}
+
+.page-header{
+    background-image: url(../images/CheckoutBanner.png);
+    background-position: bottom left;
+    background-size: cover;
+}
+
+.checkout-login .row.justify-content-center {
+    padding-top: 2em;
+    padding-bottom: 4em;
+}
+
+.checkout-login .card, #checkout-main .card {
+    -webkit-box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+    box-shadow: 0px 2px 2px rgb(0 0 0 / 10%);
+    margin-bottom: 1.5em;
+}
+
+#checkout-main > .row:first-child {
+    margin: 1em 0;
+}
+
+#checkout-main .card-header-custom {
+    font-weight: 600;
+}
+
+.shipping-method-block h3{
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 1.25em;
+}
+.shipping-method-pricing, .form-check {
+    margin-bottom: 1.25em;
+}
+
+.shipping-method-option .display-name, .shipping-method-option .text-muted {
+    font-size: 1rem;
+    color: #3E3E3C !important;
+}
+.leading-lines .end-lines span {
+    padding-left: 10px;
+    font-weight: 700;
+}
+
+#checkout-main fieldset .form-control-label {
+    color: #3E3E3C;
+    font-weight: 700;
+    font-size: .9rem;
+    margin-bottom: 2px;
+}
+
+.shipping-address-block .form-group > span {
+    font-size: .8em;
+}
+
+#checkout-main select{
+    background: none;
+}
+#checkout-main .info-icon .icon{
+    width: 1.2rem;
+    font-size: .8rem;
+}
+.data-checkout-stage[data-checkout-stage=payment] .address-selector-block .btn-add-new, .data-checkout-stage[data-checkout-stage=payment] .address-selector-block .btn-show-details {
+    border: none;
+    font-size: .9rem;
+}

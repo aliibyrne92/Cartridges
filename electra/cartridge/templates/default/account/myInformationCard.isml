@@ -1,0 +1,178 @@
+<div class="container my-information-card">
+    <div class="card">
+        <div class="card-header clearfix">
+            <h2 class="pull-left">
+                <i class="fa fa-car header-icon" aria-hidden="true"></i>
+                ${Resource.msg('label.account.myVehicle','electra',null)}
+            </h2>
+            <a href="" class="pull-right edit-btn" aria-label="${Resource.msg('label.profile.edit','account',null)}">${Resource.msg('link.edit','account',null)}</a>
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6 label">
+                                    ${Resource.msg('label.account.tradeIn','electra',null)}
+                                </div>
+                                <div class="col-6 label">
+                                    <isprint value="${pdict.CurrentSession.getCurrency().getSymbol()}" encoding="off" />${Resource.msg('value.account.tradeIn','electra',null)} 
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 label">
+                                    ${Resource.msg('label.account.year','electra',null)}
+                                </div>
+                                <div class="col-6 label">
+                                    ${Resource.msg('value.account.year','electra',null)}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 label">
+                                    ${Resource.msg('label.account.makeAndModel','electra',null)}
+                                </div>
+                                <div class="col-6 label">
+                                    ${Resource.msg('value.account.makeAndModel','electra',null)}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 label">
+                                    ${Resource.msg('label.account.vin','electra',null)}
+                                </div>
+                                <div class="col-6 label">
+                                    ${Resource.msg('value.account.vin','electra',null)}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 label">
+                                    ${Resource.msg('label.account.yearPurchased','electra',null)}
+                                </div>
+                                <div class="col-6 label">
+                                    ${Resource.msg('value.account.yearPurchased','electra',null)}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 label">
+                                    ${Resource.msg('label.account.totalMileage','electra',null)}
+                                </div>
+                                <div class="col-6 label">
+                                    ${Resource.msg('value.account.totalMileage','electra',null)}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img alt="honda-car" style="width: 15rem;" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/ZZSE_202/on/demandware.static/-/Library-Sites-ElectraSFRALibrary/default/vdc73a0b4ebb3315a0f7ee387f2ec55842d9c74ec/USC90HOC011D021001.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header clearfix">
+            <h2 class="pull-left">
+                <i class="fa fa-user-circle fa-1x user-header-icon"></i>
+                ${Resource.msg('label.account.personalInfo','electra',null)}
+            </h2>
+            <a href="" class="pull-right edit-btn" aria-label="${Resource.msg('label.profile.edit','account',null)}">${Resource.msg('link.edit','account',null)}</a>
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-3 label">
+                                    ${Resource.msg('label.account.name','electra',null)}
+                                </div>
+                                <div class="col-9 label">
+                                    ${pdict.account.profile.firstName} ${pdict.account.profile.lastName}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 label">
+                                    ${Resource.msg('label.account.email','electra',null)}
+                                </div>
+                                <div class="col-9 label">
+                                    ${pdict.account.profile.email}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 label">
+                                    ${Resource.msg('label.account.phone','electra',null)}
+                                </div>
+                                <div class="col-9 label">
+                                    ${pdict.account.profile.phone}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 label">
+                                    ${Resource.msg('label.account.deliveryAddress','electra',null)}
+                                </div>
+                                <div class="col-9 label">
+                                    ${pdict.account.profile.phone}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card"> 
+        <div class="card-header clearfix">
+            <h2 class="pull-left">
+                <i class="fa fa-building-o header-icon" aria-hidden="true"></i>
+                ${Resource.msg('label.account.myPreferredDealer','electra',null)}
+            </h2>
+            <a href="" class="pull-right edit-btn" aria-label="${Resource.msg('label.profile.edit','account',null)}">${Resource.msg('link.edit','account',null)}</a>
+        </div>
+        <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-3 label">
+                                    ${Resource.msg('label.account.dealerName','electra',null)}
+                                </div>
+                                <div class="col-9 label">
+                                    ${Resource.msg('value.account.dealerName','electra',null)}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 label">
+                                    ${Resource.msg('label.account.dealerAddress','electra',null)}
+                                </div>
+                                <div class="col-9 label">
+                                    ${Resource.msg('value.account.dealerAddress','electra',null)}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-3 label">
+                                    ${Resource.msg('label.account.phone','electra',null)}
+                                </div>
+                                <div class="col-9 label">
+                                    ${Resource.msg('value.account.dealerPhone','electra',null)}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <div class="card"> 
+        <div class="card-header clearfix">
+            <h2 class="pull-left">
+                <i class="fa fa-gift header-icon" aria-hidden="true"></i>
+                My Personalised Offer
+            </h2>
+           
+        </div>
+        <div class="card-body">
+          <img alt="offer" style="width:50rem;" src="https://edge.disstg.commercecloud.salesforce.com/dw/image/v2/ZZSE_202/on/demandware.static/-/Library-Sites-ElectraSFRALibrary/default/vdc73a0b4ebb3315a0f7ee387f2ec55842d9c74ec/skodaOffer.png" />
+        </div>
+    </div>
+</div>

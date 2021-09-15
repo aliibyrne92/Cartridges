@@ -1,0 +1,41 @@
+{
+  "name": "Spacer Row",
+  "group": "qb_custom_layouts",
+  "attribute_definition_groups": [
+    {
+      "id": "spacer_details",
+      "name": "Spacer Details",
+      "attribute_definitions": [
+        {
+          "id": "height",
+          "name": "Spacer Height",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    {
+        "id": "row_details",
+        "name": "Row Details",
+        "attribute_definitions": [
+          {
+            "id": "bg_colour",
+            "name": "Background Colour",
+            "type": "custom",
+            "required": false,
+            "editor_definition": {
+                "type": "themer.colorpicker"
+            }
+          }
+        ]
+      }
+  ],
+  "region_definitions": [
+      {
+        "id":"column1",
+        "name":"Column 1",
+        "max_components":1,
+        "component_type_exclusions": []
+      }
+  ]
+}

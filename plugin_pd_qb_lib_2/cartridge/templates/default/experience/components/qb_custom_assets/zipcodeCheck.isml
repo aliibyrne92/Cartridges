@@ -1,0 +1,91 @@
+<style>
+    .zipPopup{
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.4);
+    }
+
+    .popup-content{
+        background-color: #fefefe;
+        margin: 15% auto;
+        padding: 2rem 2rem 2rem 10%;
+        border: 1px solid #888;
+        width: 45%;
+        border-radius: 10px;
+        text-align: left;
+    }
+
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .zipInput{
+        margin: 0.5rem 0 2rem 0;
+    }
+
+    @media (max-width: 991.98px){
+        .popup-content{
+            width: 75%;
+        }
+    }
+</style>
+
+<script>
+    function showZipChecker(){
+        let zipPopup = document.getElementById('zipPopup');
+        zipPopup.style.display = "block";
+    }
+ 
+    function closeBtn() {
+        let zipPopup = document.getElementById('zipPopup');
+        zipPopup.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        let zipPopup = document.getElementById('zipPopup');
+        if (event.target == zipPopup) {
+            zipPopup.style.display = "none";
+        }
+    }
+</script>
+
+<div id="zip-btn" class="zip-btn" style="text-align:${pdict.buttonAlign}">
+    <button class="btn btn-primary showBtn" onclick="showZipChecker()">
+        ${pdict.checkZipButtonText}
+    </button>
+
+    <div id="zipPopup" class="zipPopup">
+        <div class="popup-content">
+            <span class="close" onclick="closeBtn()">&times;</span>
+            <h3>Find broadband deals</h3>
+            <p style="padding-top: 1rem;">See what broadband deals are available where you live</p>
+            
+            <p style="padding-top: 1rem;">Postcode</p>
+            <input class="zipInput" type="text"/>
+            <div>
+                <a href="${pdict.redirectURL}">
+                    <button class="btn btn-primary">
+                        Check availability
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

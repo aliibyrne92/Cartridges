@@ -1,0 +1,17 @@
+a.blogLink:hover {
+    text-decoration: none;
+}
+
+.blogHeader:hover{
+    text-decoration: underline;
+}
+
+.blogHeader{
+    padding-top: 1rem;
+    text-transform: uppercase;
+}
+
+.bmcHashtag{
+    color: #9c9c9c;
+    font-size: 0.9rem;
+}
