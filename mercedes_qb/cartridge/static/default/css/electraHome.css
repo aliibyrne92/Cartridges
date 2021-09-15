@@ -1,0 +1,14 @@
+@media (min-width: 1200px) {
+    header.pdHeader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 200;
+        background-color: transparent;
+    }
+
+    .headerTop .search {
+        top: 7%;
+    }
+}

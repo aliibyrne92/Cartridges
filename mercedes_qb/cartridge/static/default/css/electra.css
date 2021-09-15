@@ -101,6 +101,10 @@ h1.page-title:before {
     padding: 0 25px;
 }
 
+header.pdHeader {
+    background-color: var(--header-bg-colour);
+}
+
 header.notPdHeader {
     background-color: var(--header-bg-colour);
 }
@@ -399,7 +403,7 @@ select {
 
 .headerTop .search{
     position:absolute;
-    top:9%;
+    top:1%;
     right:3%;
 }
 
@@ -430,9 +434,10 @@ select {
         font-size: 1rem;
     }
 
+    /*
     header.pdHeader {
         background-color: var(--header-bg-colour);
-    }
+    }*/
 
     .brand {
         width: 9rem;
@@ -482,7 +487,7 @@ select {
     .site-search {
         width: 13rem;
     }
-
+/*
     header.pdHeader {
         position: absolute;
         top: 0;
@@ -490,7 +495,7 @@ select {
         width: 100%;
         z-index: 200;
     }
-
+*/
     .site-search input {
         background-color: transparent;
         border: none;
