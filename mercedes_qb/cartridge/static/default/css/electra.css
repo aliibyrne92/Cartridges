@@ -387,6 +387,13 @@ select {
     background: var(--action-colour) !important;
 }
 
+
+.headerTop .search{
+    position:absolute;
+    top:9%;
+    right:3%;
+}
+
 @media (max-width: 991.98px){
 
     .onlyMobile{
@@ -419,9 +426,9 @@ select {
     }
 
     .brand {
-        width: 7rem;
-        margin-left: -4rem;
-        padding-top: 1.5rem;
+        width: 9rem;
+    margin-left: -5rem;
+    padding-top: 1.2rem;
     }
 
     .ibtoOuter .ibtoContainer {
@@ -434,8 +441,12 @@ select {
         max-width: 100%;
     }
 
+    .ibtoContainer .richText{
+        font-size: 0.9rem!important;
+    }
+
     .ibtoContainer h1 {
-        font-size: 2rem;
+        font-size: 1.7rem;
     }
 
     .ibtoContainer h2,
@@ -445,6 +456,7 @@ select {
 
     .ibtoContainer .btnContainer .btn {
         margin-top: 1rem !important;
+        padding: 0.3rem 0.8rem!important;
     }
 
     .ttContainer img {
@@ -459,7 +471,7 @@ select {
 
 @media (min-width: 1200px) {
     .site-search {
-        width: 10rem;
+        width: 13rem;
     }
 
     header.pdHeader {
@@ -769,3 +781,7 @@ select {
 }
 
 /*end of app css*/
+
+.headerTop{
+    height:30px;
+}
