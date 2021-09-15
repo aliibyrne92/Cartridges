@@ -387,6 +387,15 @@ select {
     background: var(--action-colour) !important;
 }
 
+.product-tile .image-container {
+    height: 175px;
+}
+
+.image-container .tile-image{
+    object-fit: cover;
+    height: 175px;
+}
+
 
 .headerTop .search{
     position:absolute;
